@@ -684,11 +684,7 @@ HildonTouchSelector *end_range_selector;
     gtk_toggle_button_set_mode(GTK_TOGGLE_BUTTON (appGUI->opt->hiragana_radiobutton), FALSE);
 #endif
     gtk_widget_show (appGUI->opt->hiragana_radiobutton);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->opt->hiragana_radiobutton, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->opt->hiragana_radiobutton, GTK_CAN_FOCUS);
-#endif
     gtk_box_pack_start (GTK_BOX (hbox1), appGUI->opt->hiragana_radiobutton, FALSE, FALSE, 0);
     gtk_radio_button_set_group (GTK_RADIO_BUTTON (appGUI->opt->hiragana_radiobutton), radiobutton_group);
     radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (appGUI->opt->hiragana_radiobutton));
@@ -700,11 +696,7 @@ HildonTouchSelector *end_range_selector;
     gtk_toggle_button_set_mode(GTK_TOGGLE_BUTTON (katakana_radiobutton), FALSE); 
 #endif
     gtk_widget_show (katakana_radiobutton);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (katakana_radiobutton, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (katakana_radiobutton, GTK_CAN_FOCUS);
-#endif
     gtk_box_pack_start (GTK_BOX (hbox1), katakana_radiobutton, FALSE, FALSE, 0);
     gtk_radio_button_set_group (GTK_RADIO_BUTTON (katakana_radiobutton), radiobutton_group);
     radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (katakana_radiobutton));
@@ -909,22 +901,14 @@ HildonTouchSelector *end_range_selector;
     g_signal_connect (G_OBJECT (cancel_button), "clicked",
                         G_CALLBACK (auto_select_close_button_cb), appGUI);
     gtk_container_add (GTK_CONTAINER (hbuttonbox), cancel_button);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_default (cancel_button, TRUE);
-#else
-    GTK_WIDGET_SET_FLAGS (cancel_button, GTK_CAN_DEFAULT);
-#endif
 
     appGUI->opt->select_button = gui_stock_label_button(_("Select"), GTK_STOCK_INDEX);
     gtk_widget_show (appGUI->opt->select_button);
     g_signal_connect (G_OBJECT (appGUI->opt->select_button), "clicked",
                         G_CALLBACK (auto_select_select_button_cb), appGUI);
     gtk_container_add (GTK_CONTAINER (hbuttonbox), appGUI->opt->select_button);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_default(appGUI->opt->select_button, TRUE);
-#else
-    GTK_WIDGET_SET_FLAGS (appGUI->opt->select_button, GTK_CAN_DEFAULT);
-#endif
 #else
     appGUI->opt->select_button = gtk_button_new_with_label ("dummy");   
 #endif
@@ -1020,11 +1004,7 @@ static          MESSAGE msg2[CHART_ROWS];
     gtk_container_add (GTK_CONTAINER (appGUI->opt->options_window), vbox1);
 
     appGUI->opt->notebook = gtk_notebook_new();
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->opt->notebook, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->opt->notebook, GTK_CAN_FOCUS);
-#endif
     gtk_widget_show (appGUI->opt->notebook);
     gtk_notebook_set_tab_pos (GTK_NOTEBOOK(appGUI->opt->notebook), GTK_POS_TOP);
     gtk_box_pack_start (GTK_BOX (vbox1), appGUI->opt->notebook, TRUE, TRUE, 0);
@@ -1160,36 +1140,20 @@ static          MESSAGE msg2[CHART_ROWS];
                     (GtkAttachOptions) (GTK_FILL),
                     (GtkAttachOptions) (0), 0, 0);
 
-#if GTK_CHECK_VERSION(2,24,0)
     combobox_ca_timeout = gtk_combo_box_text_new ();
-#else
-    combobox_ca_timeout = gtk_combo_box_new_text ();
-#endif
 
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (combobox_ca_timeout, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (combobox_ca_timeout, GTK_CAN_FOCUS);
-#endif
     gtk_widget_show (combobox_ca_timeout);
     g_signal_connect (G_OBJECT (combobox_ca_timeout), "changed",
                       G_CALLBACK (options_combobox_ca_timeout_handler_cb), NULL);
     gtk_table_attach (GTK_TABLE (table), combobox_ca_timeout, 1, 2, 0, 1,
                       (GtkAttachOptions) (GTK_FILL | GTK_EXPAND),
                       (GtkAttachOptions) (0), 8, 0);
-#if GTK_CHECK_VERSION(2,24,0)
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_ca_timeout), _("Disabled"));
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_ca_timeout), _("1 sec"));
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_ca_timeout), _("2 sec"));
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_ca_timeout), _("3 sec"));
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_ca_timeout), _("Until any key will be pressed"));
-#else
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_ca_timeout), _("Disabled"));
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_ca_timeout), _("1 sec"));
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_ca_timeout), _("2 sec"));
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_ca_timeout), _("3 sec"));
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_ca_timeout), _("Until any key will be pressed"));
-#endif /*GTK_CHECK_VERSION(2,24,0)*/
 
     gtk_combo_box_set_active (GTK_COMBO_BOX (combobox_ca_timeout), config.ca_timeout);
 #endif
@@ -1406,11 +1370,7 @@ static          MESSAGE msg2[CHART_ROWS];
                 g_signal_connect (G_OBJECT (appGUI->opt->check_buttons[pos]), "toggled",
                                   G_CALLBACK (kana_selected_cb), &msg[pos]);
 
-#if GTK_CHECK_VERSION(2,17,5)
                 gtk_widget_set_can_focus (appGUI->opt->check_buttons[pos], FALSE);
-#else
-                GTK_WIDGET_UNSET_FLAGS (appGUI->opt->check_buttons[pos], GTK_CAN_FOCUS);
-#endif
                 gtk_container_add (GTK_CONTAINER (frames[pos]), appGUI->opt->check_buttons[pos]);
 
                 if(config.user_defined_lesson[pos] == '+') {
@@ -1429,11 +1389,7 @@ static          MESSAGE msg2[CHART_ROWS];
 
         appGUI->opt->row_button_s[j] = gui_stock_label_button (NULL, GTK_STOCK_APPLY);
         gtk_button_set_relief (GTK_BUTTON (appGUI->opt->row_button_s[j]), GTK_RELIEF_NONE);
-#if GTK_CHECK_VERSION(2,17,5)
         gtk_widget_set_can_focus (appGUI->opt->row_button_s[j], FALSE);
-#else
-        GTK_WIDGET_UNSET_FLAGS (appGUI->opt->row_button_s[j], GTK_CAN_FOCUS);
-#endif
         gtk_widget_set_tooltip_text (appGUI->opt->row_button_s[j], _("Select all kanas in row"));
         gtk_widget_show (appGUI->opt->row_button_s[j]);
         gtk_table_attach (GTK_TABLE (table), appGUI->opt->row_button_s[j], i, i+1, j, j+1,
@@ -1449,11 +1405,7 @@ static          MESSAGE msg2[CHART_ROWS];
 
         appGUI->opt->row_button_c[j] = gui_stock_label_button (NULL, GTK_STOCK_CLEAR);
         gtk_button_set_relief (GTK_BUTTON (appGUI->opt->row_button_c[j]), GTK_RELIEF_NONE);
-#if GTK_CHECK_VERSION(2,17,5)
         gtk_widget_set_can_focus (appGUI->opt->row_button_c[j], FALSE);
-#else
-        GTK_WIDGET_UNSET_FLAGS (appGUI->opt->row_button_c[j], GTK_CAN_FOCUS);
-#endif
         gtk_widget_set_tooltip_text (appGUI->opt->row_button_c[j], _("Deselect all kanas in row"));
         gtk_widget_show (appGUI->opt->row_button_c[j]);
         gtk_table_attach (GTK_TABLE (table), appGUI->opt->row_button_c[j], i, i+1, j, j+1,
@@ -1507,11 +1459,7 @@ static          MESSAGE msg2[CHART_ROWS];
     gtk_box_pack_end (GTK_BOX (hbox), combobox_dtf, FALSE, FALSE, 0);
 #else
     auto_select_button = gtk_button_new_with_label (_("Statistics based selection"));
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (auto_select_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (auto_select_button, GTK_CAN_FOCUS);
-#endif
     gtk_widget_show (auto_select_button);
     gtk_box_pack_end (GTK_BOX (hbox), auto_select_button, FALSE, FALSE, 0);
     g_signal_connect (G_OBJECT (auto_select_button), "clicked",
@@ -1528,35 +1476,19 @@ static          MESSAGE msg2[CHART_ROWS];
     gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
     gtk_misc_set_padding (GTK_MISC (label), 4, 0);
 
-#if GTK_CHECK_VERSION(2,24,0)
     combobox_dtf = gtk_combo_box_text_new ();
-#else
-    combobox_dtf = gtk_combo_box_new_text ();
-#endif
 
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (combobox_dtf, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (combobox_dtf, GTK_CAN_FOCUS);
-#endif
     gtk_widget_show (combobox_dtf);
     gtk_box_pack_start (GTK_BOX (hbox), combobox_dtf, FALSE, FALSE, 0);
     g_signal_connect (G_OBJECT (combobox_dtf), "changed",
                       G_CALLBACK (options_combobox_dtf_handler_cb), appGUI);
 
-#if GTK_CHECK_VERSION(2,24,0)
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_dtf), _("Romaji"));
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_dtf), _("Hiragana"));
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_dtf), _("Katakana"));
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_dtf), _("Hiragana + Romaji"));
     gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox_dtf), _("Katakana + Romaji"));
-#else
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_dtf), _("Romaji"));
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_dtf), _("Hiragana"));
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_dtf), _("Katakana"));
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_dtf), _("Hiragana + Romaji"));
-    gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_dtf), _("Katakana + Romaji"));
-#endif /*GTK_CHECK_VERSION(2,24,0)*/
 
     gtk_combo_box_set_active (GTK_COMBO_BOX (combobox_dtf), 0);
 
@@ -1574,33 +1506,21 @@ static          MESSAGE msg2[CHART_ROWS];
     gtk_misc_set_padding (GTK_MISC (label), 4, 0);
 
     select_all_button = gtk_button_new_with_label (_("All"));
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (select_all_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (select_all_button, GTK_CAN_FOCUS);
-#endif
     gtk_widget_show (select_all_button);
     gtk_container_add (GTK_CONTAINER (hbuttonbox_s), select_all_button);
     g_signal_connect (G_OBJECT (select_all_button), "clicked",
                       G_CALLBACK (select_all_action_cb), appGUI);
 
     select_none_button = gtk_button_new_with_label (_("None"));
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (select_none_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (select_none_button, GTK_CAN_FOCUS);
-#endif
     gtk_widget_show (select_none_button);
     gtk_container_add (GTK_CONTAINER (hbuttonbox_s), select_none_button);
     g_signal_connect (G_OBJECT (select_none_button), "clicked",
                       G_CALLBACK (select_none_action_cb), appGUI);
 
     invert_selection_button = gtk_button_new_with_label (_("Invert"));
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (invert_selection_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (invert_selection_button, GTK_CAN_FOCUS);
-#endif
     gtk_widget_show (select_none_button);
     gtk_widget_show (invert_selection_button);
     gtk_container_add (GTK_CONTAINER (hbuttonbox_s), invert_selection_button);
@@ -1621,11 +1541,7 @@ static          MESSAGE msg2[CHART_ROWS];
     g_signal_connect (G_OBJECT (close_button), "clicked",
                       G_CALLBACK (options_close_button_cb), appGUI);
     gtk_container_add (GTK_CONTAINER (hbuttonbox), close_button);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_default (close_button, TRUE);
-#else
-    GTK_WIDGET_SET_FLAGS (close_button, GTK_CAN_DEFAULT);
-#endif
 #endif
     switch(config.repeat_mode) {
         case REPEAT_ALL:

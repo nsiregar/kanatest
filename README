@@ -1,4 +1,3 @@
-
 -----------------------------------------------------------------------------
 -----                          K A N A T E S T                          -----
 -----                                                                   -----
@@ -6,7 +5,8 @@
 -----------------------------------------------------------------------------
 
 
------> WHAT ?
+                         http://clayo.org/kanatest
+
 
 Kanatest is a Japanese kana (Hiragana and Katakana) simple flashcard tool.
 You can learn, or remind yourself about kana chars in quick and easy way!
@@ -58,20 +58,6 @@ and following lessons:
       From 2 to 104 kanas can be selected by user
       in the preferences dialog.
 
-
------> WHERE ?
-
-Homepage: http://clayo.org/kanatest
-
-
------> WHO ?
-
-Programming:
-     Tomasz Maka <pasp@users.sourceforge.net>
-
-Graphics:
-     Maja Kocon (http://pinky-babble.org) - current logo, icons
-     Piotr Maka <silloz@users.sourceforge.net> - logo used in previous versions
 
 Any suggestions, patches, criticism are kindly welcome.
 

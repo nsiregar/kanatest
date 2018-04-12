@@ -532,11 +532,7 @@ gchar *translators[] = {
                         G_CALLBACK (about_close_button_cb), appGUI);
     gtk_container_add (GTK_CONTAINER (hbuttonbox), close_button);
 
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_default (close_button, TRUE);
-#else
-    GTK_WIDGET_SET_FLAGS (close_button, GTK_CAN_DEFAULT);
-#endif 
 
     gtk_widget_grab_default (close_button);
 #endif

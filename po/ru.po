@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kanatest 0.4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-26 21:02+0100\n"
+"POT-Creation-Date: 2018-04-11 23:39+0200\n"
 "PO-Revision-Date: 2011-10-01 17:42+0300\n"
 "Last-Translator: Igor Urazov <z0rc3r@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -19,53 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-msgid "About"
-msgstr "О программе"
-
-msgid "compiled on"
-msgstr "скомпилировано"
-
-msgid "Programming"
-msgstr "Программирование"
-
-msgid "Graphics"
-msgstr "Рисунки"
-
-msgid "Translators"
-msgstr "Переводчики"
-
-msgid ""
-"We would like to thank the following people for suggestions, bug reports and "
-"patches:"
-msgstr "Мы благодарим за предложения, отчёты об ошибках и патчи:"
-
-msgid "Contributors"
-msgstr "Помощники"
-
-msgid ""
-"If you like our program, send a postcard with a photo of the city where you "
-"live to"
-msgstr ""
-"Если вам понравилась наша программа, пошлите нам открытку с видом Вашего "
-"города"
-
-msgid "We have received several postcards from our happy users"
-msgstr "Кое-какие города мы уже видели"
-
-msgid ""
-"Your postcards are a kind of motivation that encourages us to keep improving "
-"Kanatest :)"
-msgstr "Ваши открытки поддерживают нас в стремлении развивать Канатест :)"
-
-msgid "Thank you!"
-msgstr "Спасибо!"
-
-msgid "Postcards"
-msgstr "Открытки"
-
-msgid "License"
-msgstr "Лицензия"
-
 msgid "Kana chart"
 msgstr "Таблица символов каны"
 
@@ -74,6 +27,18 @@ msgstr "Хирагана"
 
 msgid "Katakana"
 msgstr "Катакана"
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Chart"
+msgstr "Таблица"
+
+msgid "Options"
+msgstr "Настройки"
+
+msgid "About"
+msgstr "О программе"
 
 msgid "Test is in progress... Abort?"
 msgstr "Идёт тестирование... Прервать?"
@@ -92,12 +57,6 @@ msgstr "Киридзи"
 
 msgid "Reverse mode"
 msgstr "Обратный режим"
-
-msgid "Statistics"
-msgstr "Статистика"
-
-msgid "Options"
-msgstr "Настройки"
 
 msgid "Test mode"
 msgstr "Режим"
@@ -249,60 +208,6 @@ msgstr "Хирагана + Киридзи"
 
 msgid "Katakana + Romaji"
 msgstr "Катакана + Киридзи"
-
-msgid "Reset"
-msgstr "Сбросить"
-
-msgid "Please select options"
-msgstr "Пожалуйста, выберите настройки"
-
-msgid "Remove lessons list"
-msgstr "Удалить список уроков"
-
-msgid "Remove Hiragana statistics"
-msgstr "Удалить статистику по хирагане"
-
-msgid "Remove Katakana statistics"
-msgstr "Удалить статистику по катакане"
-
-msgid "No further recovery will be possible. Continue ?"
-msgstr "Восстановление будет невозможно. Продолжить?"
-
-msgid "Date"
-msgstr "Дата"
-
-msgid "Test type"
-msgstr "Тип"
-
-msgid "Test time"
-msgstr "Время"
-
-msgid "Questions"
-msgstr "Вопросов"
-
-msgid "Correct"
-msgstr "Верно"
-
-msgid "Wrong"
-msgstr "Неверно"
-
-msgid "Ratio (%)"
-msgstr "Оценка (%)"
-
-msgid "Lessons"
-msgstr "Вопросов"
-
-msgid "Graph"
-msgstr "График"
-
-msgid "RW"
-msgstr "ПО"
-
-msgid "RA"
-msgstr "ПБ"
-
-msgid "Chart"
-msgstr "Таблица"
 
 msgid "Mixed"
 msgstr "Все"
@@ -708,3 +613,98 @@ msgstr "Время выполнения"
 
 msgid "Information"
 msgstr "Информация"
+
+msgid "Reset"
+msgstr "Сбросить"
+
+msgid "Please select options"
+msgstr "Пожалуйста, выберите настройки"
+
+msgid "Remove lessons list"
+msgstr "Удалить список уроков"
+
+msgid "Remove Hiragana statistics"
+msgstr "Удалить статистику по хирагане"
+
+msgid "Remove Katakana statistics"
+msgstr "Удалить статистику по катакане"
+
+msgid "No further recovery will be possible. Continue ?"
+msgstr "Восстановление будет невозможно. Продолжить?"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Test type"
+msgstr "Тип"
+
+msgid "Test time"
+msgstr "Время"
+
+msgid "Questions"
+msgstr "Вопросов"
+
+msgid "Correct"
+msgstr "Верно"
+
+msgid "Wrong"
+msgstr "Неверно"
+
+msgid "Ratio (%)"
+msgstr "Оценка (%)"
+
+msgid "Lessons"
+msgstr "Вопросов"
+
+msgid "Graph"
+msgstr "График"
+
+msgid "RW"
+msgstr "ПО"
+
+msgid "RA"
+msgstr "ПБ"
+
+msgid "compiled on"
+msgstr "скомпилировано"
+
+msgid "Programming"
+msgstr "Программирование"
+
+msgid "Graphics"
+msgstr "Рисунки"
+
+msgid "Translators"
+msgstr "Переводчики"
+
+msgid ""
+"We would like to thank the following people for suggestions, bug reports and "
+"patches:"
+msgstr "Мы благодарим за предложения, отчёты об ошибках и патчи:"
+
+msgid "Contributors"
+msgstr "Помощники"
+
+msgid ""
+"If you like our program, send a postcard with a photo of the city where you "
+"live to"
+msgstr ""
+"Если вам понравилась наша программа, пошлите нам открытку с видом Вашего "
+"города"
+
+msgid "We have received several postcards from our happy users"
+msgstr "Кое-какие города мы уже видели"
+
+msgid ""
+"Your postcards are a kind of motivation that encourages us to keep improving "
+"Kanatest :)"
+msgstr "Ваши открытки поддерживают нас в стремлении развивать Канатест :)"
+
+msgid "Thank you!"
+msgstr "Спасибо!"
+
+msgid "Postcards"
+msgstr "Открытки"
+
+msgid "License"
+msgstr "Лицензия"

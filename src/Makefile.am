@@ -1,6 +1,6 @@
 if !MAEMO
-AM_CPPFLAGS = -Wall -DLOCALEDIR=\"$(datadir)/locale\" \
-			  -DGDK_PIXBUF_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED
+AM_CPPFLAGS = -Wall -DLOCALEDIR=\"$(datadir)/locale\" @GTK_CFLAGS@
+			
 bin_PROGRAMS = kanatest
 kanatest_SOURCES = about.c about.h \
 				   chart.c chart.h \
@@ -15,7 +15,7 @@ kanatest_SOURCES = about.c about.h \
 				   stock_icons.c stock_icons.h stock_icons_data.h \
 				   test.c test.h 
 
-kanatest_LDADD = $(LIBINTL)
+kanatest_LDADD = $(LIBINTL) @GTK_LIBS@ 
 
 else
 

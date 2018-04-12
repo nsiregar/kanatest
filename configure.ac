@@ -12,34 +12,8 @@ AC_PROG_CC
 
 # Checks for libraries.
 
-AC_MSG_CHECKING([which GTK+ version to compile against])
-AC_ARG_WITH([gtk],
-  [AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
-  [case "$with_gtk" in
-     2.0|3.0) ;;
-     *) AC_MSG_ERROR([invalid gtk version specified]) ;;
-   esac],
-  [with_gtk=2.0])
-AC_MSG_RESULT([$with_gtk])
-
-case "$with_gtk" in
-  2.0) GTK_API_VERSION=2.0
-       GTK_REQUIRED=2.12.0
-       ;;
-  3.0) GTK_API_VERSION=3.0
-       GTK_REQUIRED=2.91.6
-       ;;
-esac
-
-AC_SUBST([GTK_API_VERSION])
-
-AM_CONDITIONAL([HAVE_GTK_2],[test "$with_gtk" = "2.0"])
-AM_CONDITIONAL([HAVE_GTK_3],[test "$with_gtk" = "3.0"])
-
-PKG_CHECK_MODULES(GTK, [gtk+-$GTK_API_VERSION >= $GTK_REQUIRED])
-
-gtk_CFLAGS=$(pkg-config --cflags gtk+-$GTK_API_VERSION)
-gtk_LIBS=$(pkg-config --libs gtk+-$GTK_API_VERSION)
+AM_PATH_GTK_3_0(3.10.0,,
+    AC_MSG_ERROR([GTK+ not found or too old (version < 3.10)]))
 
 AC_CHECK_PROG([var], [xml2-config], [yes], [no])
 if test ! "$var" = "yes"; then

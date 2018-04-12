@@ -215,7 +215,6 @@ GETTEXT_PACKAGE = @GETTEXT_PACKAGE@
 GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
 GREP = @GREP@
-GTK_API_VERSION = @GTK_API_VERSION@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
 HILDON_CFLAGS = @HILDON_CFLAGS@
@@ -309,9 +308,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 var = @var@
-@MAEMO_FALSE@AM_CPPFLAGS = -Wall -DLOCALEDIR=\"$(datadir)/locale\" \
-@MAEMO_FALSE@			  -DGDK_PIXBUF_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED
-
+@MAEMO_FALSE@AM_CPPFLAGS = -Wall -DLOCALEDIR=\"$(datadir)/locale\" @GTK_CFLAGS@
 @MAEMO_FALSE@kanatest_SOURCES = about.c about.h \
 @MAEMO_FALSE@				   chart.c chart.h \
 @MAEMO_FALSE@				   graphics.h \
@@ -338,7 +335,7 @@ var = @var@
 @MAEMO_TRUE@				   stock_icons.c stock_icons.h stock_icons_data.h \
 @MAEMO_TRUE@				   test.c test.h 
 
-@MAEMO_FALSE@kanatest_LDADD = $(LIBINTL)
+@MAEMO_FALSE@kanatest_LDADD = $(LIBINTL) @GTK_LIBS@ 
 @MAEMO_TRUE@kanatest_LDADD = $(gtk_LIBS) $(xml_LIBS) $(HILDON_LIBS) $(OSSO_LIBS)
 @MAEMO_TRUE@kanatest_CFLAGS = $(gtk_CFLAGS) $(xml_CFLAGS) $(HILDON_CFLAGS) $(OSSO_CFLAGS)
 all: all-am

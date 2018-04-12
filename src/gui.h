@@ -32,9 +32,7 @@
 #include <sys/time.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
-#if GTK_CHECK_VERSION(2,90,7)
 #include <gdk/gdkkeysyms-compat.h>
-#endif
 #include <glib/gstdio.h>
 #include <libxml/parser.h>
 #ifdef MAEMO
@@ -62,25 +60,11 @@ void        show_splash_screen  (void);
 
 #define     TRANSLATION_DOMAIN  "kanatest"
 
-#if !GTK_CHECK_VERSION(2,13,4)
-#define     gtk_widget_get_window(x) (x)->window
-#endif
-
-#if !GTK_CHECK_VERSION(2,90,0)
-#define     gtk_bin_get_child(x)          (x)->child
-#define     gtk_dialog_get_content_area(x) (x)->vbox
-#endif
-
-#if GTK_CHECK_VERSION(2,91,0)
 #define     GtkObject GtkAdjustment
-#endif
 
-#if GTK_CHECK_VERSION(2,91,2)
 #define     gtk_combo_box_new_text    gtk_combo_box_text_new
 #define     gtk_combo_box_append_text gtk_combo_box_text_append_text
-#endif
 
-#if GTK_CHECK_VERSION(3,1,90)
 #undef      GTK_FONT_SELECTION_DIALOG
 #define     GTK_FONT_SELECTION_DIALOG                  GTK_FONT_CHOOSER
 #define     gtk_font_selection_dialog_new(x)           gtk_font_chooser_dialog_new(x, NULL)
@@ -89,15 +73,12 @@ void        show_splash_screen  (void);
 #define     gtk_font_selection_dialog_set_preview_text gtk_font_chooser_set_preview_text
 #define     gtk_hbutton_box_new()                      gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL)
 #define     gtk_hseparator_new()                       gtk_separator_new(GTK_ORIENTATION_HORIZONTAL)
-#endif
 
-#if GTK_CHECK_VERSION(3,3,2)
 #undef      GTK_TABLE
 #define     GTK_TABLE GTK_GRID
 #define     gtk_table_attach(q, r, s, t, u, v, w, x, y, z) gtk_grid_attach(q, r, s, u, 1, 1)
 #define     gtk_table_new(x, y, z)                         gtk_grid_new()
 #define     gtk_table_set_col_spacings                     gtk_grid_set_column_spacing
-#endif
 
 typedef struct {
 

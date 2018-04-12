@@ -238,15 +238,10 @@ double h_real_y_pos, k_real_y_pos, region, stepX, stepY;
 double dash[] = { 1.0 };
 gchar buffer[BUFFER_SIZE];
 
-#if GTK_CHECK_VERSION(2,17,7)
     GtkAllocation dwdh;
     gtk_widget_get_allocation(appGUI->sts->graph_viewport, &dwdh);
     width = dwdh.width - 4;
     height = dwdh.height - 4;
-#else
-    width = appGUI->sts->graph_viewport->allocation.width - 4;
-    height = appGUI->sts->graph_viewport->allocation.height - 4;
-#endif
 
     sts_cr = gdk_cairo_create (gtk_widget_get_window(appGUI->sts->graph_drawing_area));
 
@@ -396,13 +391,8 @@ graph_configure_event (GtkWidget *widget, GdkEventConfigure *event, gpointer use
     return TRUE;
 }
 
-#if !GTK_CHECK_VERSION(2,91,0)
 gint
 graph_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer user_data) {
-#else
-gint
-graph_expose_event (GtkWidget *widget, cairo_t *event, gpointer user_data) {
-#endif
 
     GUI *appGUI = (GUI *)user_data;
 
@@ -490,11 +480,7 @@ gchar *column_names[NUMBER_OF_COLUMNS] = {
     gtk_container_add (GTK_CONTAINER (appGUI->sts->stat_window), vbox1);
 
     appGUI->sts->notebook = gtk_notebook_new ();
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus(appGUI->sts->notebook, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS(appGUI->sts->notebook, GTK_CAN_FOCUS);
-#endif
     gtk_widget_show (appGUI->sts->notebook);
     gtk_box_pack_start (GTK_BOX (vbox1), appGUI->sts->notebook, TRUE, TRUE, 4);
 
@@ -732,13 +718,8 @@ gchar *column_names[NUMBER_OF_COLUMNS] = {
 
     g_signal_connect (G_OBJECT(appGUI->sts->graph_drawing_area), "configure_event",
                       G_CALLBACK(graph_configure_event), appGUI);
-#if !GTK_CHECK_VERSION(2,91,0)
-    g_signal_connect (G_OBJECT(appGUI->sts->graph_drawing_area), "expose_event",
-                      G_CALLBACK(graph_expose_event), appGUI);
-#else
     g_signal_connect (G_OBJECT(appGUI->sts->graph_drawing_area), "draw",
                       G_CALLBACK(graph_expose_event), appGUI);
-#endif
 
     /* buttons */
 
@@ -762,11 +743,7 @@ gchar *column_names[NUMBER_OF_COLUMNS] = {
     g_signal_connect (G_OBJECT (close_button), "clicked",
                         G_CALLBACK (stats_window_close_cb), appGUI);
     gtk_container_add (GTK_CONTAINER (hbuttonbox), close_button);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_default (close_button, TRUE);
-#else
-    GTK_WIDGET_SET_FLAGS (close_button, GTK_CAN_DEFAULT);
-#endif
 #endif
     if (appGUI->sts->active_tab != -1) {
         gtk_notebook_set_current_page (GTK_NOTEBOOK (appGUI->sts->notebook), appGUI->sts->active_tab);

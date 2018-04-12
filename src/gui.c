@@ -279,9 +279,7 @@ gui_disable_test (GUI *appGUI) {
 
     gtk_progress_bar_set_text (GTK_PROGRESS_BAR (appGUI->progressbar),
                                 _("Select test mode, kana set and press START"));
-#if GTK_CHECK_VERSION(2,90,3)
     gtk_progress_bar_set_show_text (GTK_PROGRESS_BAR (appGUI->progressbar), TRUE);
-#endif
 }
 
 /*--------------------------------------------------------------------*/
@@ -435,7 +433,7 @@ gui_set_button_kana (gint button_number, gint kana_number, gint mode, GUI *appGU
             if (kana_number >= MIXED_SEPARATOR) {
                 kana_number -= MIXED_SEPARATOR;
             }
-            g_snprintf (tmpbuf, BUFFER_SIZE, "<span font_desc='25' face='%s' color='%s'>%s</span>",
+            g_snprintf (tmpbuf, BUFFER_SIZE, "<span font_desc='20' face='%s' color='%s'>%s</span>",
                         config.kana_font_face,
                         config.kana_color,
                         get_kana_sign(kana_number, HIRAGANA, TRUE));
@@ -445,7 +443,7 @@ gui_set_button_kana (gint button_number, gint kana_number, gint mode, GUI *appGU
             if (kana_number >= MIXED_SEPARATOR) {
                 kana_number -= MIXED_SEPARATOR;
             }
-            g_snprintf (tmpbuf, BUFFER_SIZE, "<span font_desc='25' face='%s' color='%s'>%s</span>",
+            g_snprintf (tmpbuf, BUFFER_SIZE, "<span font_desc='20' face='%s' color='%s'>%s</span>",
                         config.kana_font_face,
                         config.kana_color,
                         get_kana_sign(kana_number, KATAKANA, TRUE));
@@ -453,13 +451,13 @@ gui_set_button_kana (gint button_number, gint kana_number, gint mode, GUI *appGU
             break;
        case MIXED:
             if (kana_number >= MIXED_SEPARATOR) {
-                g_snprintf (tmpbuf, BUFFER_SIZE, "<span font_desc='25' face='%s' color='%s'>%s</span>",
+                g_snprintf (tmpbuf, BUFFER_SIZE, "<span font_desc='20' face='%s' color='%s'>%s</span>",
                                                  config.kana_font_face,
                                                  config.kana_color,
                                                  get_kana_sign((kana_number-MIXED_SEPARATOR), KATAKANA, TRUE));
                 appGUI->old_kana_type = KATAKANA;
             } else {
-                g_snprintf (tmpbuf, BUFFER_SIZE, "<span font_desc='25' face='%s' color='%s'>%s</span>",
+                g_snprintf (tmpbuf, BUFFER_SIZE, "<span font_desc='20' face='%s' color='%s'>%s</span>",
                                                  config.kana_font_face,
                                                  config.kana_color,
                                                  get_kana_sign(kana_number, HIRAGANA, TRUE));
@@ -792,13 +790,8 @@ HildonGtkInputMode input_mode;
     gtk_window_move (GTK_WINDOW (appGUI->main_window),
                                  config.window_x, config.window_y);
 
-#if GTK_CHECK_VERSION(2,24,0)
     gtk_widget_add_events (GTK_WIDGET (appGUI->main_window),
                                  GDK_BUTTON_PRESS_MASK);
-#else
-    gtk_widget_add_events (GTK_WINDOW (appGUI->main_window),
-                                 GDK_BUTTON_PRESS_MASK);
-#endif /*GTK_CHECK_VERSION(2,24,0) */
 
 #endif
     g_signal_connect (G_OBJECT (appGUI->main_window), "delete_event",
@@ -856,11 +849,7 @@ HildonGtkInputMode input_mode;
 
     for (i = 0; i < KANA_MAX_CHOICES; i++) {
         button = gtk_button_new();
-#if GTK_CHECK_VERSION(2,17,5)
         gtk_widget_set_can_focus (button, FALSE);
-#else
-        GTK_WIDGET_UNSET_FLAGS (button, GTK_CAN_FOCUS);
-#endif 
         gtk_widget_show(GTK_WIDGET(button));
         appGUI->kana_choices[i] = button;
         g_signal_connect(G_OBJECT(button), "clicked",
@@ -954,22 +943,14 @@ HildonGtkInputMode input_mode;
     /* Create interface buttons, but not put them inside layouts yet. */
 
     appGUI->reverse_button = gui_stock_label_togglebutton(NULL, GTK_STOCK_REFRESH);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->reverse_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->reverse_button, GTK_CAN_FOCUS);
-#endif
     gtk_widget_set_tooltip_text (appGUI->reverse_button, _("Reverse mode"));
     g_signal_connect (G_OBJECT (appGUI->reverse_button), "toggled",
                         G_CALLBACK (toggle_reverse_mode_cb), appGUI);
     gtk_widget_show (appGUI->reverse_button);
 
     appGUI->stat_button = gui_stock_label_button(NULL, KANATEST_STOCK_BUTTON_STATISTICS);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->stat_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->stat_button, GTK_CAN_FOCUS);
-#endif 
     gtk_widget_set_tooltip_text (appGUI->stat_button, _("Statistics"));
     g_signal_connect (G_OBJECT (appGUI->stat_button), "clicked",
                         G_CALLBACK (show_statistics_window_cb), appGUI);
@@ -988,11 +969,7 @@ HildonGtkInputMode input_mode;
     gtk_container_set_border_width (GTK_CONTAINER (appGUI->stat_button), 2);
 
     appGUI->chart_button = gui_stock_label_button(NULL, KANATEST_STOCK_BUTTON_CHART);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->chart_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->chart_button, GTK_CAN_FOCUS);
-#endif 
     g_signal_connect (G_OBJECT (appGUI->chart_button), "clicked",
                         G_CALLBACK (show_chart_window_cb), appGUI);
     gtk_widget_show (appGUI->chart_button);
@@ -1001,11 +978,7 @@ HildonGtkInputMode input_mode;
     gtk_widget_set_tooltip_text (appGUI->chart_button, _("Kana chart"));
 
     appGUI->prefs_button = gui_stock_label_button(NULL, KANATEST_STOCK_BUTTON_OPTIONS);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->prefs_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->prefs_button, GTK_CAN_FOCUS);
-#endif 
     g_signal_connect (G_OBJECT (appGUI->prefs_button), "clicked",
                         G_CALLBACK (show_options_window_cb), appGUI);
     gtk_widget_show (appGUI->prefs_button);
@@ -1014,11 +987,7 @@ HildonGtkInputMode input_mode;
     gtk_widget_set_tooltip_text (appGUI->prefs_button, _("Options"));
 
     appGUI->about_button = gui_stock_label_button(NULL, KANATEST_STOCK_BUTTON_ABOUT);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->about_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->about_button, GTK_CAN_FOCUS);
-#endif 
     g_signal_connect (G_OBJECT (appGUI->about_button), "clicked",
                         G_CALLBACK (show_about_window_cb), appGUI);
     gtk_widget_show (appGUI->about_button);
@@ -1041,11 +1010,7 @@ HildonGtkInputMode input_mode;
     gtk_alignment_set_padding (GTK_ALIGNMENT (alignment), 0, 0, 12, 0);
 #ifndef MAEMO
 
-#if GTK_CHECK_VERSION(2,24,0)
     appGUI->combobox_kana_mode = gtk_combo_box_text_new ();
-#else
-     appGUI->combobox_kana_mode = gtk_combo_box_new_text ();
-#endif
 
     gtk_widget_show (appGUI->combobox_kana_mode);
     g_signal_connect (G_OBJECT (appGUI->combobox_kana_mode), "changed",
@@ -1054,11 +1019,7 @@ HildonGtkInputMode input_mode;
     gtk_container_set_border_width (GTK_CONTAINER (alignment), 4);
 
     for(i=0; i < KANA_MODE_NAMES; i++) {
-#if GTK_CHECK_VERSION(2,24,0)
         gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT(appGUI->combobox_kana_mode), get_test_mode_name(i+1));
-#else
-        gtk_combo_box_append_text (GTK_COMBO_BOX (appGUI->combobox_kana_mode), get_test_mode_name(i+1));
-#endif
     }
 
     appGUI->label_ka = gtk_label_new (NULL);
@@ -1101,11 +1062,7 @@ HildonGtkInputMode input_mode;
     
 #ifndef MAEMO
 
-#if GTK_CHECK_VERSION(2,24,0)
     appGUI->combobox_lesson = gtk_combo_box_text_new ();
-#else
-    appGUI->combobox_lesson = gtk_combo_box_new_text ();
-#endif
 
     gtk_widget_show (appGUI->combobox_lesson);
     g_signal_connect (G_OBJECT (appGUI->combobox_lesson), "changed",
@@ -1114,11 +1071,7 @@ HildonGtkInputMode input_mode;
     gtk_container_set_border_width (GTK_CONTAINER (alignment), 4);
 
     for(i=0; i < KANA_SET_NAMES; i++) {
-#if GTK_CHECK_VERSION(2,24,0)
         gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (appGUI->combobox_lesson), get_kana_set_name(i));
-#else
-        gtk_combo_box_append_text (GTK_COMBO_BOX (appGUI->combobox_lesson), get_kana_set_name(i));
-#endif
     }
 
     appGUI->label_le = gtk_label_new (NULL);
@@ -1167,21 +1120,13 @@ HildonGtkInputMode input_mode;
     gtk_box_set_spacing (GTK_BOX (hbuttonbox), 5);
 
     appGUI->start_button = gui_stock_label_button(_("Start"), GTK_STOCK_EXECUTE);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->start_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->start_button, GTK_CAN_FOCUS);
-#endif
     g_signal_connect (G_OBJECT (appGUI->start_button), "clicked",
                         G_CALLBACK (start_test_cb), appGUI);
     gtk_widget_show (appGUI->start_button);
     gtk_container_add (GTK_CONTAINER (hbuttonbox), appGUI->start_button);
     gtk_container_set_border_width (GTK_CONTAINER (appGUI->start_button), 4);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_default (appGUI->start_button, TRUE);
-#else
-    GTK_WIDGET_SET_FLAGS (appGUI->start_button, GTK_CAN_DEFAULT);
-#endif
     gtk_widget_set_tooltip_text (appGUI->start_button, _("Press to begin testing..."));
 #ifdef MAEMO
      gtk_container_add (GTK_CONTAINER (hbuttonbox), appGUI->reverse_button);
@@ -1224,39 +1169,23 @@ HildonGtkInputMode input_mode;
      gtk_widget_set_tooltip_text (appGUI->about_button, _("About"));
 #endif
     appGUI->stop_button = gui_stock_label_button(_("Stop"), GTK_STOCK_STOP);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->stop_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->stop_button, GTK_CAN_FOCUS);
-#endif
     g_signal_connect (G_OBJECT (appGUI->stop_button), "clicked",
                         G_CALLBACK (stop_test_cb), appGUI);
     gtk_widget_show (appGUI->stop_button);
     gtk_container_add (GTK_CONTAINER (hbuttonbox), appGUI->stop_button);
     gtk_container_set_border_width (GTK_CONTAINER (appGUI->stop_button), 4);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_default (appGUI->stop_button, TRUE);
-#else
-    GTK_WIDGET_SET_FLAGS (appGUI->stop_button, GTK_CAN_DEFAULT);
-#endif
     gtk_widget_set_tooltip_text (appGUI->stop_button, _("Press to stop testing..."));
 
     appGUI->quit_button = gui_stock_label_button(_("Quit"), GTK_STOCK_QUIT);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_focus (appGUI->quit_button, FALSE);
-#else
-    GTK_WIDGET_UNSET_FLAGS (appGUI->quit_button, GTK_CAN_FOCUS);
-#endif
     g_signal_connect (G_OBJECT (appGUI->quit_button), "clicked",
                         G_CALLBACK (gui_close_window_cb), appGUI);
     gtk_widget_show (appGUI->quit_button);
     gtk_container_add (GTK_CONTAINER (hbuttonbox), appGUI->quit_button);
     gtk_container_set_border_width (GTK_CONTAINER (appGUI->quit_button), 4);
-#if GTK_CHECK_VERSION(2,17,5)
     gtk_widget_set_can_default (appGUI->quit_button, TRUE);
-#else
-    GTK_WIDGET_SET_FLAGS (appGUI->quit_button, GTK_CAN_DEFAULT);
-#endif
     gtk_widget_set_tooltip_text (appGUI->quit_button, _("Exit!"));
 
     gui_disable_test (appGUI);

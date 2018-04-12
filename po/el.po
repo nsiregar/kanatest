@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kanatest 0.4.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-28 01:37+0200\n"
+"POT-Creation-Date: 2018-04-11 23:39+0200\n"
 "PO-Revision-Date: 2015-12-28 03:10+0200\n"
 "Last-Translator: Spyros Papanastasiou <spyridon.papanastasiou@gmail.com>\n"
 "Language-Team: Greek <LL@li.org>\n"
@@ -19,57 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.6\n"
 
-msgid "About"
-msgstr "Περί"
-
-msgid "compiled on"
-msgstr "μεταγλωττίστηκε στις"
-
-msgid "Programming"
-msgstr "Προγραμματισμός"
-
-msgid "Graphics"
-msgstr "Γραφικά"
-
-msgid "Translators"
-msgstr "Μεταφραστές"
-
-msgid ""
-"We would like to thank the following people for suggestions, bug reports and "
-"patches:"
-msgstr ""
-"Θα θέλαμε να ευχαριστήσουμε τους ακόλουθους ανθρώπους για τις συμβουλές, τις "
-"αναφορές αποσφαλμάτωσης και τις διορθώσεις:"
-
-msgid "Contributors"
-msgstr "Συντελεστές"
-
-msgid ""
-"If you like our program, send a postcard with a photo of the city where you "
-"live to"
-msgstr ""
-"Αν σας αρέσει το πρόγραμμά μας, στείλτε μία καρτ-ποστάλ με μια φωτογραφία "
-"της πόλης όπου μένετε"
-
-msgid "We have received several postcards from our happy users"
-msgstr "Παραλάβαμε πολλές καρτ-ποστάλ από τους χαρούμενούς μας χρήστες"
-
-msgid ""
-"Your postcards are a kind of motivation that encourages us to keep improving "
-"Kanatest :)"
-msgstr ""
-"Οι καρτ-ποστάλ σας είναι ένα είδος κινήτρου που μας ενθαρρύνει να "
-"βελτιώνουμε συνέχεια το Kanatest :)"
-
-msgid "Thank you!"
-msgstr "Σας ευχαριστούμε!"
-
-msgid "Postcards"
-msgstr "Καρτ-ποστάλ"
-
-msgid "License"
-msgstr "Άδεια Χρήσης"
-
 msgid "Kana chart"
 msgstr "Χάρτης Κάνα"
 
@@ -78,6 +27,18 @@ msgstr "Χιραγκάνα"
 
 msgid "Katakana"
 msgstr "Κατακάνα"
+
+msgid "Statistics"
+msgstr "Στατιστικά"
+
+msgid "Chart"
+msgstr "Διάγραμμα"
+
+msgid "Options"
+msgstr "Επιλογές"
+
+msgid "About"
+msgstr "Περί"
 
 msgid "Test is in progress... Abort?"
 msgstr "Τεστ σε εξέλιξη... Ματαίωση?"
@@ -96,12 +57,6 @@ msgstr "Ροματζί"
 
 msgid "Reverse mode"
 msgstr "Ανάστροφη λειτουργία"
-
-msgid "Statistics"
-msgstr "Στατιστικά"
-
-msgid "Options"
-msgstr "Επιλογές"
 
 msgid "Test mode"
 msgstr "Είδος τεστ"
@@ -252,60 +207,6 @@ msgstr "Χιραγκάνα + Ροματζί"
 
 msgid "Katakana + Romaji"
 msgstr "Κατακάνα + Ροματζί"
-
-msgid "Reset"
-msgstr "Μηδενισμός"
-
-msgid "Please select options"
-msgstr "Παρακαλώ επιλέξτε προτιμήσεις"
-
-msgid "Remove lessons list"
-msgstr "Αφαίρεσε τη λίστα με τα μαθήματα"
-
-msgid "Remove Hiragana statistics"
-msgstr "Αφαίρεσε τα στατιστικά της Χιραγκάνα"
-
-msgid "Remove Katakana statistics"
-msgstr "Αφαίρεσε τα στατιστικά της Κατακάνα"
-
-msgid "No further recovery will be possible. Continue ?"
-msgstr "Η ανάκτηση δεν θα είναι πλέον δυνατή. Να συνεχίσω ?"
-
-msgid "Date"
-msgstr "Ημερομηνία"
-
-msgid "Test type"
-msgstr "Είδος τεστ"
-
-msgid "Test time"
-msgstr "Χρόνος τεστ"
-
-msgid "Questions"
-msgstr "Ερωτήσεις"
-
-msgid "Correct"
-msgstr "Σωστά"
-
-msgid "Wrong"
-msgstr "Λάθος"
-
-msgid "Ratio (%)"
-msgstr "Ποσοστό (%)"
-
-msgid "Lessons"
-msgstr "Μαθήματα"
-
-msgid "Graph"
-msgstr "Γράφημα"
-
-msgid "RW"
-msgstr ""
-
-msgid "RA"
-msgstr ""
-
-msgid "Chart"
-msgstr "Διάγραμμα"
 
 msgid "Mixed"
 msgstr "Μικτά"
@@ -709,3 +610,102 @@ msgstr "Χρόνος εξάσκησης"
 
 msgid "Information"
 msgstr "Πληροφορίες"
+
+msgid "Reset"
+msgstr "Μηδενισμός"
+
+msgid "Please select options"
+msgstr "Παρακαλώ επιλέξτε προτιμήσεις"
+
+msgid "Remove lessons list"
+msgstr "Αφαίρεσε τη λίστα με τα μαθήματα"
+
+msgid "Remove Hiragana statistics"
+msgstr "Αφαίρεσε τα στατιστικά της Χιραγκάνα"
+
+msgid "Remove Katakana statistics"
+msgstr "Αφαίρεσε τα στατιστικά της Κατακάνα"
+
+msgid "No further recovery will be possible. Continue ?"
+msgstr "Η ανάκτηση δεν θα είναι πλέον δυνατή. Να συνεχίσω ?"
+
+msgid "Date"
+msgstr "Ημερομηνία"
+
+msgid "Test type"
+msgstr "Είδος τεστ"
+
+msgid "Test time"
+msgstr "Χρόνος τεστ"
+
+msgid "Questions"
+msgstr "Ερωτήσεις"
+
+msgid "Correct"
+msgstr "Σωστά"
+
+msgid "Wrong"
+msgstr "Λάθος"
+
+msgid "Ratio (%)"
+msgstr "Ποσοστό (%)"
+
+msgid "Lessons"
+msgstr "Μαθήματα"
+
+msgid "Graph"
+msgstr "Γράφημα"
+
+msgid "RW"
+msgstr ""
+
+msgid "RA"
+msgstr ""
+
+msgid "compiled on"
+msgstr "μεταγλωττίστηκε στις"
+
+msgid "Programming"
+msgstr "Προγραμματισμός"
+
+msgid "Graphics"
+msgstr "Γραφικά"
+
+msgid "Translators"
+msgstr "Μεταφραστές"
+
+msgid ""
+"We would like to thank the following people for suggestions, bug reports and "
+"patches:"
+msgstr ""
+"Θα θέλαμε να ευχαριστήσουμε τους ακόλουθους ανθρώπους για τις συμβουλές, τις "
+"αναφορές αποσφαλμάτωσης και τις διορθώσεις:"
+
+msgid "Contributors"
+msgstr "Συντελεστές"
+
+msgid ""
+"If you like our program, send a postcard with a photo of the city where you "
+"live to"
+msgstr ""
+"Αν σας αρέσει το πρόγραμμά μας, στείλτε μία καρτ-ποστάλ με μια φωτογραφία "
+"της πόλης όπου μένετε"
+
+msgid "We have received several postcards from our happy users"
+msgstr "Παραλάβαμε πολλές καρτ-ποστάλ από τους χαρούμενούς μας χρήστες"
+
+msgid ""
+"Your postcards are a kind of motivation that encourages us to keep improving "
+"Kanatest :)"
+msgstr ""
+"Οι καρτ-ποστάλ σας είναι ένα είδος κινήτρου που μας ενθαρρύνει να "
+"βελτιώνουμε συνέχεια το Kanatest :)"
+
+msgid "Thank you!"
+msgstr "Σας ευχαριστούμε!"
+
+msgid "Postcards"
+msgstr "Καρτ-ποστάλ"
+
+msgid "License"
+msgstr "Άδεια Χρήσης"
