@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kanatest 0.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 23:39+0200\n"
+"POT-Creation-Date: 2013-01-26 21:02+0100\n"
 "PO-Revision-Date: 2007-09-16 00:16+0200\n"
 "Last-Translator: Bruno Ramos <ladrilho@gmail.com>\n"
 "Language-Team: Portuguese\n"
@@ -17,6 +17,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "About"
+msgstr "Sobre"
+
+msgid "compiled on"
+msgstr "Compilado em"
+
+msgid "Programming"
+msgstr "Programação"
+
+msgid "Graphics"
+msgstr "Gráficos"
+
+msgid "Translators"
+msgstr "Tradutores"
+
+msgid ""
+"We would like to thank the following people for suggestions, bug reports and "
+"patches:"
+msgstr ""
+"Agradecemos às seguintes pessoas pelas sugestões, relatórios de problemas e "
+"correcções:"
+
+msgid "Contributors"
+msgstr "Contribuiram ainda"
+
+#, fuzzy
+msgid ""
+"If you like our program, send a postcard with a photo of the city where you "
+"live to"
+msgstr "Se gostaram do nosso programa mandem um postal da cidade onde vivem:"
+
+#, fuzzy
+msgid "We have received several postcards from our happy users"
+msgstr "Recebemos vários postais dos nossos utilizadores:"
+
+msgid ""
+"Your postcards are a kind of motivation that encourages us to keep improving "
+"Kanatest :)"
+msgstr ""
+"Os vossos postais são uma espécie de motivação que nos encoraja a continuar "
+"a melhorar o Kanatest :)"
+
+msgid "Thank you!"
+msgstr "Obrigado!"
+
+msgid "Postcards"
+msgstr "Postais"
+
+msgid "License"
+msgstr "Licença"
+
 msgid "Kana chart"
 msgstr "Tabela Kana"
 
@@ -25,18 +76,6 @@ msgstr "Hiragana"
 
 msgid "Katakana"
 msgstr "Katakana"
-
-msgid "Statistics"
-msgstr "Estatísticas"
-
-msgid "Chart"
-msgstr ""
-
-msgid "Options"
-msgstr "Opções"
-
-msgid "About"
-msgstr "Sobre"
 
 msgid "Test is in progress... Abort?"
 msgstr ""
@@ -56,6 +95,12 @@ msgstr "Romaji"
 #, fuzzy
 msgid "Reverse mode"
 msgstr "Tipo de teste"
+
+msgid "Statistics"
+msgstr "Estatísticas"
+
+msgid "Options"
+msgstr "Opções"
 
 msgid "Test mode"
 msgstr "Tipo de teste"
@@ -215,6 +260,65 @@ msgstr "Hiragana"
 #, fuzzy
 msgid "Katakana + Romaji"
 msgstr "Katakana"
+
+#, fuzzy
+msgid "Reset"
+msgstr "Apagar estatísticas"
+
+#, fuzzy
+msgid "Please select options"
+msgstr "Opções extra"
+
+msgid "Remove lessons list"
+msgstr ""
+
+msgid "Remove Hiragana statistics"
+msgstr ""
+
+msgid "Remove Katakana statistics"
+msgstr ""
+
+msgid "No further recovery will be possible. Continue ?"
+msgstr ""
+
+msgid "Date"
+msgstr "Data"
+
+#, fuzzy
+msgid "Test type"
+msgstr "Tempo do teste"
+
+msgid "Test time"
+msgstr "Tempo do teste"
+
+msgid "Questions"
+msgstr "Perguntas"
+
+msgid "Correct"
+msgstr "Certo"
+
+msgid "Wrong"
+msgstr "Errado"
+
+msgid "Ratio (%)"
+msgstr "Percentagem (%)"
+
+#, fuzzy
+msgid "Lessons"
+msgstr "Perguntas"
+
+#, fuzzy
+msgid "Graph"
+msgstr "Gráficos"
+
+msgid "RW"
+msgstr "RW"
+
+msgid "RA"
+msgstr "RA"
+
+msgid "Chart"
+msgstr ""
 
 msgid "Mixed"
 msgstr "Mixed"
@@ -623,110 +727,6 @@ msgstr "Tempo do teste:"
 
 msgid "Information"
 msgstr "Informação"
-
-#, fuzzy
-msgid "Reset"
-msgstr "Apagar estatísticas"
-
-#, fuzzy
-msgid "Please select options"
-msgstr "Opções extra"
-
-msgid "Remove lessons list"
-msgstr ""
-
-msgid "Remove Hiragana statistics"
-msgstr ""
-
-msgid "Remove Katakana statistics"
-msgstr ""
-
-msgid "No further recovery will be possible. Continue ?"
-msgstr ""
-
-msgid "Date"
-msgstr "Data"
-
-#, fuzzy
-msgid "Test type"
-msgstr "Tempo do teste"
-
-msgid "Test time"
-msgstr "Tempo do teste"
-
-msgid "Questions"
-msgstr "Perguntas"
-
-msgid "Correct"
-msgstr "Certo"
-
-msgid "Wrong"
-msgstr "Errado"
-
-msgid "Ratio (%)"
-msgstr "Percentagem (%)"
-
-#, fuzzy
-msgid "Lessons"
-msgstr "Perguntas"
-
-#, fuzzy
-msgid "Graph"
-msgstr "Gráficos"
-
-msgid "RW"
-msgstr "RW"
-
-msgid "RA"
-msgstr "RA"
-
-msgid "compiled on"
-msgstr "Compilado em"
-
-msgid "Programming"
-msgstr "Programação"
-
-msgid "Graphics"
-msgstr "Gráficos"
-
-msgid "Translators"
-msgstr "Tradutores"
-
-msgid ""
-"We would like to thank the following people for suggestions, bug reports and "
-"patches:"
-msgstr ""
-"Agradecemos às seguintes pessoas pelas sugestões, relatórios de problemas e "
-"correcções:"
-
-msgid "Contributors"
-msgstr "Contribuiram ainda"
-
-#, fuzzy
-msgid ""
-"If you like our program, send a postcard with a photo of the city where you "
-"live to"
-msgstr "Se gostaram do nosso programa mandem um postal da cidade onde vivem:"
-
-#, fuzzy
-msgid "We have received several postcards from our happy users"
-msgstr "Recebemos vários postais dos nossos utilizadores:"
-
-msgid ""
-"Your postcards are a kind of motivation that encourages us to keep improving "
-"Kanatest :)"
-msgstr ""
-"Os vossos postais são uma espécie de motivação que nos encoraja a continuar "
-"a melhorar o Kanatest :)"
-
-msgid "Thank you!"
-msgstr "Obrigado!"
-
-msgid "Postcards"
-msgstr "Postais"
-
-msgid "License"
-msgstr "Licença"
 
 #~ msgid "Misc options"
 #~ msgstr "Opções extra"

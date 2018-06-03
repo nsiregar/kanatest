@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kanatest 0.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 23:39+0200\n"
+"POT-Creation-Date: 2013-01-26 21:02+0100\n"
 "PO-Revision-Date: 2009-04-05 17:07-0000\n"
 "Last-Translator: Jacopo Farina <jacopo.farina@email.it>\n"
 "Language-Team: Italian\n"
@@ -16,6 +16,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "About"
+msgstr "Informazioni su"
+
+msgid "compiled on"
+msgstr "compilato il"
+
+msgid "Programming"
+msgstr "Programmazione"
+
+msgid "Graphics"
+msgstr "Grafici"
+
+msgid "Translators"
+msgstr "Traduttori"
+
+msgid ""
+"We would like to thank the following people for suggestions, bug reports and "
+"patches:"
+msgstr ""
+"Vogliamo ringraziare le seguenti persone per i suggerimenti, i difetti "
+"segnalati e le correzioni:"
+
+msgid "Contributors"
+msgstr "Collaboratori"
+
+msgid ""
+"If you like our program, send a postcard with a photo of the city where you "
+"live to"
+msgstr ""
+"Se hai gradito il programma, manda una cartolina con una foto della città in "
+"cui vivi a"
+
+msgid "We have received several postcards from our happy users"
+msgstr "Abbiamo ricevuto molte cartoline dai nostri utenti contenti"
+
+msgid ""
+"Your postcards are a kind of motivation that encourages us to keep improving "
+"Kanatest :)"
+msgstr ""
+"Le vostre cartoline sono una forma di motivazione che ci incoraggia a "
+"continuare a migliorare Kanatest :)"
+
+msgid "Thank you!"
+msgstr "Grazie!"
+
+msgid "Postcards"
+msgstr "Cartoline"
+
+msgid "License"
+msgstr "Licenza"
+
 msgid "Kana chart"
 msgstr "Tabella dei Kana"
 
@@ -24,18 +75,6 @@ msgstr "Hiragana"
 
 msgid "Katakana"
 msgstr "Katakana"
-
-msgid "Statistics"
-msgstr "Statistiche"
-
-msgid "Chart"
-msgstr "Tabella"
-
-msgid "Options"
-msgstr "Opzioni"
-
-msgid "About"
-msgstr "Informazioni su"
 
 msgid "Test is in progress... Abort?"
 msgstr "test in corso... Annullare?"
@@ -55,6 +94,12 @@ msgstr "Romaji"
 #, fuzzy
 msgid "Reverse mode"
 msgstr "Tipo di test"
+
+msgid "Statistics"
+msgstr "Statistiche"
+
+msgid "Options"
+msgstr "Opzioni"
 
 msgid "Test mode"
 msgstr "Tipo di test"
@@ -211,6 +256,61 @@ msgstr "Hiragana"
 #, fuzzy
 msgid "Katakana + Romaji"
 msgstr "Katakana"
+
+msgid "Reset"
+msgstr "Reimposta"
+
+msgid "Please select options"
+msgstr "Seleziona le opzioni"
+
+msgid "Remove lessons list"
+msgstr "Elimina la lista delle lezioni"
+
+msgid "Remove Hiragana statistics"
+msgstr "Elimina le statistiche degli Hiragana"
+
+msgid "Remove Katakana statistics"
+msgstr "Elimina le statistiche dei Katakana"
+
+msgid "No further recovery will be possible. Continue ?"
+msgstr "I dati non possono essere recuperati. Continuare ?"
+
+msgid "Date"
+msgstr "imposta"
+
+#, fuzzy
+msgid "Test type"
+msgstr "Durata"
+
+msgid "Test time"
+msgstr "Durata"
+
+msgid "Questions"
+msgstr "Domande"
+
+msgid "Correct"
+msgstr "Corrette"
+
+msgid "Wrong"
+msgstr "Sbagliate"
+
+msgid "Ratio (%)"
+msgstr "Rapporto (%)"
+
+msgid "Lessons"
+msgstr "Lezioni"
+
+msgid "Graph"
+msgstr "Grafico"
+
+msgid "RW"
+msgstr "RS"
+
+msgid "RA"
+msgstr "RM"
+
+msgid "Chart"
+msgstr "Tabella"
 
 msgid "Mixed"
 msgstr "Mescolati"
@@ -616,106 +716,6 @@ msgstr "Durata del test"
 
 msgid "Information"
 msgstr "Informazioni"
-
-msgid "Reset"
-msgstr "Reimposta"
-
-msgid "Please select options"
-msgstr "Seleziona le opzioni"
-
-msgid "Remove lessons list"
-msgstr "Elimina la lista delle lezioni"
-
-msgid "Remove Hiragana statistics"
-msgstr "Elimina le statistiche degli Hiragana"
-
-msgid "Remove Katakana statistics"
-msgstr "Elimina le statistiche dei Katakana"
-
-msgid "No further recovery will be possible. Continue ?"
-msgstr "I dati non possono essere recuperati. Continuare ?"
-
-msgid "Date"
-msgstr "imposta"
-
-#, fuzzy
-msgid "Test type"
-msgstr "Durata"
-
-msgid "Test time"
-msgstr "Durata"
-
-msgid "Questions"
-msgstr "Domande"
-
-msgid "Correct"
-msgstr "Corrette"
-
-msgid "Wrong"
-msgstr "Sbagliate"
-
-msgid "Ratio (%)"
-msgstr "Rapporto (%)"
-
-msgid "Lessons"
-msgstr "Lezioni"
-
-msgid "Graph"
-msgstr "Grafico"
-
-msgid "RW"
-msgstr "RS"
-
-msgid "RA"
-msgstr "RM"
-
-msgid "compiled on"
-msgstr "compilato il"
-
-msgid "Programming"
-msgstr "Programmazione"
-
-msgid "Graphics"
-msgstr "Grafici"
-
-msgid "Translators"
-msgstr "Traduttori"
-
-msgid ""
-"We would like to thank the following people for suggestions, bug reports and "
-"patches:"
-msgstr ""
-"Vogliamo ringraziare le seguenti persone per i suggerimenti, i difetti "
-"segnalati e le correzioni:"
-
-msgid "Contributors"
-msgstr "Collaboratori"
-
-msgid ""
-"If you like our program, send a postcard with a photo of the city where you "
-"live to"
-msgstr ""
-"Se hai gradito il programma, manda una cartolina con una foto della città in "
-"cui vivi a"
-
-msgid "We have received several postcards from our happy users"
-msgstr "Abbiamo ricevuto molte cartoline dai nostri utenti contenti"
-
-msgid ""
-"Your postcards are a kind of motivation that encourages us to keep improving "
-"Kanatest :)"
-msgstr ""
-"Le vostre cartoline sono una forma di motivazione che ci incoraggia a "
-"continuare a migliorare Kanatest :)"
-
-msgid "Thank you!"
-msgstr "Grazie!"
-
-msgid "Postcards"
-msgstr "Cartoline"
-
-msgid "License"
-msgstr "Licenza"
 
 #~ msgid "Misc options"
 #~ msgstr "Altre opzioni"

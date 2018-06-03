@@ -259,6 +259,9 @@ STRIP = @STRIP@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
 XGETTEXT = @XGETTEXT@
+XML2_CONFIG = @XML2_CONFIG@
+XML_CPPFLAGS = @XML_CPPFLAGS@
+XML_LIBS = @XML_LIBS@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -308,7 +311,17 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 var = @var@
-@MAEMO_FALSE@AM_CPPFLAGS = -Wall -DLOCALEDIR=\"$(datadir)/locale\" @GTK_CFLAGS@
+AUTOMAKE_OPTIONS = -Wno-portability
+ISREPO := "$(shell git rev-parse --is-inside-work-tree 2> /dev/null)"
+REVISION := "$(shell git rev-parse --short HEAD 2>/dev/null)"
+VERSION_MAJOR := $(shell echo $(VERSION) | awk -F "." '{print $$1}')
+VERSION_MINOR := $(shell echo $(VERSION) | awk -F "." '{print $$2}')
+VERSION_MICRO := $(shell echo $(VERSION) | awk -F "." '{print $$3}')
+@MAEMO_FALSE@AM_CPPFLAGS = -DLOCALEDIR=\"$(datadir)/locale\" @GTK_CFLAGS@ @XML_CPPFLAGS@ \
+@MAEMO_FALSE@			  -DREVISION=$(REVISION) \
+@MAEMO_FALSE@			  -DVERSION_MAJOR=\"$(VERSION_MAJOR)\" -DVERSION_MINOR=\"$(VERSION_MINOR)\" -DVERSION_MICRO=\"$(VERSION_MICRO)\"
+
+@MAEMO_FALSE@AM_CFLAGS = @CFLAGS@
 @MAEMO_FALSE@kanatest_SOURCES = about.c about.h \
 @MAEMO_FALSE@				   chart.c chart.h \
 @MAEMO_FALSE@				   graphics.h \
@@ -335,7 +348,7 @@ var = @var@
 @MAEMO_TRUE@				   stock_icons.c stock_icons.h stock_icons_data.h \
 @MAEMO_TRUE@				   test.c test.h 
 
-@MAEMO_FALSE@kanatest_LDADD = $(LIBINTL) @GTK_LIBS@ 
+@MAEMO_FALSE@kanatest_LDADD = $(LIBINTL) @GTK_LIBS@ -lm @XML_LIBS@
 @MAEMO_TRUE@kanatest_LDADD = $(gtk_LIBS) $(xml_LIBS) $(HILDON_LIBS) $(OSSO_LIBS)
 @MAEMO_TRUE@kanatest_CFLAGS = $(gtk_CFLAGS) $(xml_CFLAGS) $(HILDON_CFLAGS) $(OSSO_CFLAGS)
 all: all-am

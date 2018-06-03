@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kanatest 0.4.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 23:39+0200\n"
+"POT-Creation-Date: 2013-01-26 21:02+0100\n"
 "PO-Revision-Date: 2013-01-26 21:02+0100\n"
 "Last-Translator: Mario Kamenjak <mkamenjak77@gmail.com>\n"
 "Language-Team: Croatian\n"
@@ -18,6 +18,54 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
+msgid "About"
+msgstr "O proizvodu"
+
+msgid "compiled on"
+msgstr "Kompilirano na"
+
+msgid "Programming"
+msgstr "Programiranje"
+
+msgid "Graphics"
+msgstr "Grafike"
+
+msgid "Translators"
+msgstr "Prevoditelji"
+
+msgid ""
+"We would like to thank the following people for suggestions, bug reports and "
+"patches:"
+msgstr ""
+"Htjeli bismo se zahvaliti slijedećim osobama na prijedlozima, prijavama "
+"grešaka i zakrpama:"
+
+msgid "Contributors"
+msgstr "Pridonositelji"
+
+msgid ""
+"If you like our program, send a postcard with a photo of the city where you "
+"live to"
+msgstr "Ako vam se sviđa naš program pošaljite nam sliku grada u kojem živite"
+
+msgid "We have received several postcards from our happy users"
+msgstr "Već smo primili više razglednica od naših sretnih korisnika"
+
+msgid ""
+"Your postcards are a kind of motivation that encourages us to keep improving "
+"Kanatest :)"
+msgstr ""
+"Vaše razglednice su nam nekakva motivacija da nastavimo poboljšavati Kanatest"
+
+msgid "Thank you!"
+msgstr "Hvala"
+
+msgid "Postcards"
+msgstr "Razglednice"
+
+msgid "License"
+msgstr "Licenca"
+
 msgid "Kana chart"
 msgstr ""
 
@@ -26,18 +74,6 @@ msgstr "Hiragana"
 
 msgid "Katakana"
 msgstr "Katakana"
-
-msgid "Statistics"
-msgstr "Statistika"
-
-msgid "Chart"
-msgstr "Dijagram"
-
-msgid "Options"
-msgstr "Opcije"
-
-msgid "About"
-msgstr "O proizvodu"
 
 msgid "Test is in progress... Abort?"
 msgstr "Ispit je u tijeku...Prekinuti?"
@@ -56,6 +92,12 @@ msgstr "Romaji"
 
 msgid "Reverse mode"
 msgstr "Unazadni način"
+
+msgid "Statistics"
+msgstr "Statistika"
+
+msgid "Options"
+msgstr "Opcije"
 
 msgid "Test mode"
 msgstr "Način ispitivanja"
@@ -208,6 +250,60 @@ msgstr "Hiragana + Romaji"
 
 msgid "Katakana + Romaji"
 msgstr "Katakana + Romaji"
+
+msgid "Reset"
+msgstr "Ponovno postavi"
+
+msgid "Please select options"
+msgstr "Molim odaberi opcije"
+
+msgid "Remove lessons list"
+msgstr "Ukloni listu lekcija"
+
+msgid "Remove Hiragana statistics"
+msgstr "Obriši statistiku Hiragane"
+
+msgid "Remove Katakana statistics"
+msgstr "Obriši statistiku Katakane"
+
+msgid "No further recovery will be possible. Continue ?"
+msgstr "Neće biti moguće vratiti podatke"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Test type"
+msgstr "Tip testa"
+
+msgid "Test time"
+msgstr "Vrijeme testa"
+
+msgid "Questions"
+msgstr "Pitanja"
+
+msgid "Correct"
+msgstr "Točno"
+
+msgid "Wrong"
+msgstr "Krivo"
+
+msgid "Ratio (%)"
+msgstr "Udio (%)"
+
+msgid "Lessons"
+msgstr "Lekcije"
+
+msgid "Graph"
+msgstr "Graf"
+
+msgid "RW"
+msgstr "RW"
+
+msgid "RA"
+msgstr "RA"
+
+msgid "Chart"
+msgstr "Dijagram"
 
 msgid "Mixed"
 msgstr "Miješano"
@@ -613,99 +709,3 @@ msgstr "Vrijeme vježbe"
 
 msgid "Information"
 msgstr "Informacije"
-
-msgid "Reset"
-msgstr "Ponovno postavi"
-
-msgid "Please select options"
-msgstr "Molim odaberi opcije"
-
-msgid "Remove lessons list"
-msgstr "Ukloni listu lekcija"
-
-msgid "Remove Hiragana statistics"
-msgstr "Obriši statistiku Hiragane"
-
-msgid "Remove Katakana statistics"
-msgstr "Obriši statistiku Katakane"
-
-msgid "No further recovery will be possible. Continue ?"
-msgstr "Neće biti moguće vratiti podatke"
-
-msgid "Date"
-msgstr "Datum"
-
-msgid "Test type"
-msgstr "Tip testa"
-
-msgid "Test time"
-msgstr "Vrijeme testa"
-
-msgid "Questions"
-msgstr "Pitanja"
-
-msgid "Correct"
-msgstr "Točno"
-
-msgid "Wrong"
-msgstr "Krivo"
-
-msgid "Ratio (%)"
-msgstr "Udio (%)"
-
-msgid "Lessons"
-msgstr "Lekcije"
-
-msgid "Graph"
-msgstr "Graf"
-
-msgid "RW"
-msgstr "RW"
-
-msgid "RA"
-msgstr "RA"
-
-msgid "compiled on"
-msgstr "Kompilirano na"
-
-msgid "Programming"
-msgstr "Programiranje"
-
-msgid "Graphics"
-msgstr "Grafike"
-
-msgid "Translators"
-msgstr "Prevoditelji"
-
-msgid ""
-"We would like to thank the following people for suggestions, bug reports and "
-"patches:"
-msgstr ""
-"Htjeli bismo se zahvaliti slijedećim osobama na prijedlozima, prijavama "
-"grešaka i zakrpama:"
-
-msgid "Contributors"
-msgstr "Pridonositelji"
-
-msgid ""
-"If you like our program, send a postcard with a photo of the city where you "
-"live to"
-msgstr "Ako vam se sviđa naš program pošaljite nam sliku grada u kojem živite"
-
-msgid "We have received several postcards from our happy users"
-msgstr "Već smo primili više razglednica od naših sretnih korisnika"
-
-msgid ""
-"Your postcards are a kind of motivation that encourages us to keep improving "
-"Kanatest :)"
-msgstr ""
-"Vaše razglednice su nam nekakva motivacija da nastavimo poboljšavati Kanatest"
-
-msgid "Thank you!"
-msgstr "Hvala"
-
-msgid "Postcards"
-msgstr "Razglednice"
-
-msgid "License"
-msgstr "Licenca"

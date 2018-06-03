@@ -1,5 +1,16 @@
+AUTOMAKE_OPTIONS = -Wno-portability
+ISREPO := "$(shell git rev-parse --is-inside-work-tree 2> /dev/null)"
+REVISION := "$(shell git rev-parse --short HEAD 2>/dev/null)"
+VERSION_MAJOR := $(shell echo $(VERSION) | awk -F "." '{print $$1}')
+VERSION_MINOR := $(shell echo $(VERSION) | awk -F "." '{print $$2}')
+VERSION_MICRO := $(shell echo $(VERSION) | awk -F "." '{print $$3}')
+
 if !MAEMO
-AM_CPPFLAGS = -Wall -DLOCALEDIR=\"$(datadir)/locale\" @GTK_CFLAGS@
+AM_CPPFLAGS = -DLOCALEDIR=\"$(datadir)/locale\" @GTK_CFLAGS@ @XML_CPPFLAGS@ \
+			  -DREVISION=$(REVISION) \
+			  -DVERSION_MAJOR=\"$(VERSION_MAJOR)\" -DVERSION_MINOR=\"$(VERSION_MINOR)\" -DVERSION_MICRO=\"$(VERSION_MICRO)\"
+
+AM_CFLAGS = @CFLAGS@
 			
 bin_PROGRAMS = kanatest
 kanatest_SOURCES = about.c about.h \
@@ -15,7 +26,7 @@ kanatest_SOURCES = about.c about.h \
 				   stock_icons.c stock_icons.h stock_icons_data.h \
 				   test.c test.h 
 
-kanatest_LDADD = $(LIBINTL) @GTK_LIBS@ 
+kanatest_LDADD = $(LIBINTL) @GTK_LIBS@ -lm @XML_LIBS@
 
 else
 

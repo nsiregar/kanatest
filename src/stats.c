@@ -732,13 +732,13 @@ gchar *column_names[NUMBER_OF_COLUMNS] = {
     gtk_widget_show (hseparator);
     gtk_box_pack_end (GTK_BOX (vbox1), hseparator, FALSE, TRUE, 8);
 #ifndef MAEMO
-    reset_button = gui_stock_label_button(_("Reset"), GTK_STOCK_CLEAR);
+    reset_button = gui_stock_label_button(_("Reset"), "edit-clear");
     gtk_widget_show (reset_button);
     g_signal_connect (G_OBJECT (reset_button), "clicked",
                         G_CALLBACK (stats_reset_cb), appGUI);
     gtk_container_add (GTK_CONTAINER (hbuttonbox), reset_button);
 
-    close_button = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
+    close_button = gui_stock_label_button(_("Close"), "window-close");
     gtk_widget_show (close_button);
     g_signal_connect (G_OBJECT (close_button), "clicked",
                         G_CALLBACK (stats_window_close_cb), appGUI);

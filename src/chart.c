@@ -24,6 +24,7 @@
 #include "main.h"
 #include "test.h"
 #include "prefs.h"
+#include "gui_utils.h"
 #ifdef MAEMO
 #include <hildon/hildon.h>
 #endif
@@ -192,7 +193,7 @@ gint        i, j, pos;
     gtk_window_move (GTK_WINDOW (appGUI->chr->chart_window),
                                 config.chart_window_x, config.chart_window_y);
 #endif
-    vbox2 = gtk_vbox_new (FALSE, 0);
+    vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_show (vbox2);
     gtk_container_add (GTK_CONTAINER (appGUI->chr->chart_window), vbox2);
 #ifdef MAEMO
@@ -208,7 +209,7 @@ gint        i, j, pos;
     gtk_widget_show (viewport);
     gtk_container_add (GTK_CONTAINER (scrolledwindow), viewport);
 
-    vbox1 = gtk_vbox_new (FALSE, 0);
+    vbox1 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_show (vbox1);
     gtk_container_add (GTK_CONTAINER (viewport), vbox1);
 
@@ -241,7 +242,7 @@ gint        i, j, pos;
         }
     }
 
-    hbox1 = gtk_hbox_new (FALSE, 0);
+    hbox1 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_widget_show (hbox1);
     gtk_box_pack_start (GTK_BOX (vbox2), hbox1, FALSE, TRUE, 4);
 
@@ -282,7 +283,7 @@ gint        i, j, pos;
     gtk_widget_show (appGUI->chr->chart_window);
     chart_display_kanas(HIRAGANA, appGUI);
 #else
-    close_button = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
+    close_button = gui_stock_label_button(_("Close"), "window-close");
     gtk_widget_show (close_button);
     g_signal_connect (G_OBJECT (close_button), "clicked",
                         G_CALLBACK (chart_close_button_cb), appGUI);

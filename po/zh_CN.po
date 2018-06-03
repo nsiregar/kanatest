@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kanatest 0.4.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 23:39+0200\n"
+"POT-Creation-Date: 2013-01-26 21:02+0100\n"
 "PO-Revision-Date: 2009-04-12 13:48+0200\n"
 "Last-Translator: Zeray Rice <fanzeyi1994@gmail.com>\n"
 "Language-Team: znCN <LL@li.org>\n"
@@ -15,6 +15,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+msgid "About"
+msgstr "关于"
+
+msgid "compiled on"
+msgstr "编译于"
+
+msgid "Programming"
+msgstr "程序"
+
+msgid "Graphics"
+msgstr "图像"
+
+msgid "Translators"
+msgstr "译者"
+
+msgid ""
+"We would like to thank the following people for suggestions, bug reports and "
+"patches:"
+msgstr "我们对以下给程序提供建议，汇报BUG和提交补丁的人表示感谢："
+
+msgid "Contributors"
+msgstr "贡献者"
+
+msgid ""
+"If you like our program, send a postcard with a photo of the city where you "
+"live to"
+msgstr "如果你喜欢我们的程序，请给我寄一张有你所在城市照片的明信片"
+
+msgid "We have received several postcards from our happy users"
+msgstr "我们已经收到了很多喜欢我们的程序的用户的寄的明信片"
+
+msgid ""
+"Your postcards are a kind of motivation that encourages us to keep improving "
+"Kanatest :)"
+msgstr "你的明信片会给Kanatest的开发提供一个莫大的鼓励 :)"
+
+msgid "Thank you!"
+msgstr "谢谢你"
+
+msgid "Postcards"
+msgstr "明信片"
+
+msgid "License"
+msgstr "使用协议"
+
 msgid "Kana chart"
 msgstr "假名表"
 
@@ -23,18 +68,6 @@ msgstr "平假名"
 
 msgid "Katakana"
 msgstr "片假名"
-
-msgid "Statistics"
-msgstr "统计报告"
-
-msgid "Chart"
-msgstr "表格"
-
-msgid "Options"
-msgstr "选项"
-
-msgid "About"
-msgstr "关于"
 
 msgid "Test is in progress... Abort?"
 msgstr "正在测验中...确定要放弃？"
@@ -54,6 +87,12 @@ msgstr "罗马音"
 #, fuzzy
 msgid "Reverse mode"
 msgstr "测验模式"
+
+msgid "Statistics"
+msgstr "统计报告"
+
+msgid "Options"
+msgstr "选项"
 
 msgid "Test mode"
 msgstr "测验模式"
@@ -205,6 +244,61 @@ msgstr "平假名"
 #, fuzzy
 msgid "Katakana + Romaji"
 msgstr "片假名"
+
+msgid "Reset"
+msgstr "重置"
+
+msgid "Please select options"
+msgstr "请选择一个选项"
+
+msgid "Remove lessons list"
+msgstr "重置测试记录"
+
+msgid "Remove Hiragana statistics"
+msgstr "重置平假名统计报告"
+
+msgid "Remove Katakana statistics"
+msgstr "重置片假名统计报告"
+
+msgid "No further recovery will be possible. Continue ?"
+msgstr "此操作不可恢复，你确定吗？"
+
+msgid "Date"
+msgstr "时间"
+
+#, fuzzy
+msgid "Test type"
+msgstr "测试时长"
+
+msgid "Test time"
+msgstr "测试时长"
+
+msgid "Questions"
+msgstr "总问题数"
+
+msgid "Correct"
+msgstr "正确数目"
+
+msgid "Wrong"
+msgstr "错误数目"
+
+msgid "Ratio (%)"
+msgstr "百分比"
+
+msgid "Lessons"
+msgstr "测试记录"
+
+msgid "Graph"
+msgstr "图像"
+
+msgid "RW"
+msgstr "RW"
+
+msgid "RA"
+msgstr "RA"
+
+msgid "Chart"
+msgstr "表格"
 
 msgid "Mixed"
 msgstr "混合"
@@ -608,97 +702,3 @@ msgstr "花费时间"
 
 msgid "Information"
 msgstr "信息"
-
-msgid "Reset"
-msgstr "重置"
-
-msgid "Please select options"
-msgstr "请选择一个选项"
-
-msgid "Remove lessons list"
-msgstr "重置测试记录"
-
-msgid "Remove Hiragana statistics"
-msgstr "重置平假名统计报告"
-
-msgid "Remove Katakana statistics"
-msgstr "重置片假名统计报告"
-
-msgid "No further recovery will be possible. Continue ?"
-msgstr "此操作不可恢复，你确定吗？"
-
-msgid "Date"
-msgstr "时间"
-
-#, fuzzy
-msgid "Test type"
-msgstr "测试时长"
-
-msgid "Test time"
-msgstr "测试时长"
-
-msgid "Questions"
-msgstr "总问题数"
-
-msgid "Correct"
-msgstr "正确数目"
-
-msgid "Wrong"
-msgstr "错误数目"
-
-msgid "Ratio (%)"
-msgstr "百分比"
-
-msgid "Lessons"
-msgstr "测试记录"
-
-msgid "Graph"
-msgstr "图像"
-
-msgid "RW"
-msgstr "RW"
-
-msgid "RA"
-msgstr "RA"
-
-msgid "compiled on"
-msgstr "编译于"
-
-msgid "Programming"
-msgstr "程序"
-
-msgid "Graphics"
-msgstr "图像"
-
-msgid "Translators"
-msgstr "译者"
-
-msgid ""
-"We would like to thank the following people for suggestions, bug reports and "
-"patches:"
-msgstr "我们对以下给程序提供建议，汇报BUG和提交补丁的人表示感谢："
-
-msgid "Contributors"
-msgstr "贡献者"
-
-msgid ""
-"If you like our program, send a postcard with a photo of the city where you "
-"live to"
-msgstr "如果你喜欢我们的程序，请给我寄一张有你所在城市照片的明信片"
-
-msgid "We have received several postcards from our happy users"
-msgstr "我们已经收到了很多喜欢我们的程序的用户的寄的明信片"
-
-msgid ""
-"Your postcards are a kind of motivation that encourages us to keep improving "
-"Kanatest :)"
-msgstr "你的明信片会给Kanatest的开发提供一个莫大的鼓励 :)"
-
-msgid "Thank you!"
-msgstr "谢谢你"
-
-msgid "Postcards"
-msgstr "明信片"
-
-msgid "License"
-msgstr "使用协议"

@@ -15,18 +15,13 @@ AC_PROG_CC
 AM_PATH_GTK_3_0(3.10.0,,
     AC_MSG_ERROR([GTK+ not found or too old (version < 3.10)]))
 
+AM_PATH_XML2(2.0.0,,
+    AC_MSG_ERROR([You do not appear to have libxml2 installed.]))
+
 AC_CHECK_PROG([var], [xml2-config], [yes], [no])
 if test ! "$var" = "yes"; then
     AC_MSG_ERROR(You do not appear to have xml2-config installed.)
 fi
-
-xml_CFLAGS=`xml2-config --cflags`
-xml_LIBS=`xml2-config --libs`
-
-AC_CHECK_LIB(xml2,
-    xmlNewDoc,
-    [],
-    [AC_MSG_ERROR(You do not appear to have libxml2 installed.)])
 
 AC_ARG_ENABLE(
     debug,
@@ -38,10 +33,13 @@ if test "x$debug" = "xyes"; then
     AC_DEFINE([DEBUG_BUILD], [1], [Defined if doing a debug build])
 fi
 
-CFLAGS="$BUILD_CFLAGS -Wall $PLATFORM_CFLAGS -D_GNU_SOURCE"
-CXXFLAGS="$CFLAGS"
-CPPFLAGS="$gtk_CFLAGS $xml_CFLAGS"
-LIBS="$gtk_LIBS $xml_LIBS"
+dnl CFLAGS="$BUILD_CFLAGS -Wall $PLATFORM_CFLAGS -D_GNU_SOURCE"
+dnl CXXFLAGS="$CFLAGS"
+
+CFLAGS=${CFLAGS:="$BUILD_CFLAGS -Wall $PLATFORM_CFLAGS -D_GNU_SOURCE"}
+CXXFLAGS=${CXXFLAGS:="$CFLAGS"}
+CPPFLAGS=""
+LIBS=""
 
 # Checks for header files.
 AC_HEADER_STDC

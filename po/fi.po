@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kanatest 0.4.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 23:39+0200\n"
+"POT-Creation-Date: 2013-01-26 21:02+0100\n"
 "PO-Revision-Date: 2010-01-25 23:20+0000\n"
 "Last-Translator: Aki Nyman <aki.nyman@gmail.com>\n"
 "Language-Team: Finnish \n"
@@ -17,6 +17,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "About"
+msgstr "Tietoja"
+
+msgid "compiled on"
+msgstr "käännetty"
+
+msgid "Programming"
+msgstr "Ohjelmointi"
+
+msgid "Graphics"
+msgstr "Grafiikka"
+
+msgid "Translators"
+msgstr "Kielenkääntäjät"
+
+msgid ""
+"We would like to thank the following people for suggestions, bug reports and "
+"patches:"
+msgstr ""
+"Haluaisimme kiittää seuraavia henkilöitä ehdotuksista, bugiraporteista ja "
+"patch-tiedostoista:"
+
+msgid "Contributors"
+msgstr "Avustajat"
+
+msgid ""
+"If you like our program, send a postcard with a photo of the city where you "
+"live to"
+msgstr ""
+"Jos pidät ohjelmastamme, lähetä meille postikortti, jossa on valokuva "
+"kotikaupungistasi osoitteeseen"
+
+msgid "We have received several postcards from our happy users"
+msgstr "Olemme saaneet useita postikortteja tyytyväísiltä ohjelman käyttäjiltä"
+
+msgid ""
+"Your postcards are a kind of motivation that encourages us to keep improving "
+"Kanatest :)"
+msgstr ""
+"Lähettämänne postikortit toimivat motivaation lähteenä ja rohkaisevat meitä "
+"edelleen parantamaan Kanatest-ohjelmaa :)"
+
+msgid "Thank you!"
+msgstr "Kiitos!"
+
+msgid "Postcards"
+msgstr "Postikortit"
+
+msgid "License"
+msgstr "Lisenssi"
+
 msgid "Kana chart"
 msgstr "Kana-taulukko"
 
@@ -25,18 +76,6 @@ msgstr "Hiragana"
 
 msgid "Katakana"
 msgstr "Katakana"
-
-msgid "Statistics"
-msgstr "Tilasto"
-
-msgid "Chart"
-msgstr "Taulukko"
-
-msgid "Options"
-msgstr "Valinnat"
-
-msgid "About"
-msgstr "Tietoja"
 
 msgid "Test is in progress... Abort?"
 msgstr "Testi on käynnissä...Keskeytä?"
@@ -56,6 +95,12 @@ msgstr "Romaji"
 #, fuzzy
 msgid "Reverse mode"
 msgstr "Testimoodi"
+
+msgid "Statistics"
+msgstr "Tilasto"
+
+msgid "Options"
+msgstr "Valinnat"
 
 msgid "Test mode"
 msgstr "Testimoodi"
@@ -208,6 +253,61 @@ msgstr "Hiragana"
 #, fuzzy
 msgid "Katakana + Romaji"
 msgstr "Katakana"
+
+msgid "Reset"
+msgstr "Resetoi"
+
+msgid "Please select options"
+msgstr "Valitse vaihtoehdoista"
+
+msgid "Remove lessons list"
+msgstr "Poista oppituntilista"
+
+msgid "Remove Hiragana statistics"
+msgstr "Poista Hiragana-tilasto"
+
+msgid "Remove Katakana statistics"
+msgstr "Poista Katakana-tilasto"
+
+msgid "No further recovery will be possible. Continue ?"
+msgstr "Tiedot menetetään pysyvästi, Jatketaanko ?"
+
+msgid "Date"
+msgstr "Päivämäärä"
+
+#, fuzzy
+msgid "Test type"
+msgstr "Testiaika"
+
+msgid "Test time"
+msgstr "Testiaika"
+
+msgid "Questions"
+msgstr "Kysymykset"
+
+msgid "Correct"
+msgstr "Oikein"
+
+msgid "Wrong"
+msgstr "Väärin"
+
+msgid "Ratio (%)"
+msgstr "Suhde (%)"
+
+msgid "Lessons"
+msgstr "Oppitunnit"
+
+msgid "Graph"
+msgstr "Kaavio"
+
+msgid "RW"
+msgstr "RW"
+
+msgid "RA"
+msgstr "RA"
+
+msgid "Chart"
+msgstr "Taulukko"
 
 msgid "Mixed"
 msgstr "Sekoitus"
@@ -611,103 +711,3 @@ msgstr "Testausaika"
 
 msgid "Information"
 msgstr "Yhteenveto"
-
-msgid "Reset"
-msgstr "Resetoi"
-
-msgid "Please select options"
-msgstr "Valitse vaihtoehdoista"
-
-msgid "Remove lessons list"
-msgstr "Poista oppituntilista"
-
-msgid "Remove Hiragana statistics"
-msgstr "Poista Hiragana-tilasto"
-
-msgid "Remove Katakana statistics"
-msgstr "Poista Katakana-tilasto"
-
-msgid "No further recovery will be possible. Continue ?"
-msgstr "Tiedot menetetään pysyvästi, Jatketaanko ?"
-
-msgid "Date"
-msgstr "Päivämäärä"
-
-#, fuzzy
-msgid "Test type"
-msgstr "Testiaika"
-
-msgid "Test time"
-msgstr "Testiaika"
-
-msgid "Questions"
-msgstr "Kysymykset"
-
-msgid "Correct"
-msgstr "Oikein"
-
-msgid "Wrong"
-msgstr "Väärin"
-
-msgid "Ratio (%)"
-msgstr "Suhde (%)"
-
-msgid "Lessons"
-msgstr "Oppitunnit"
-
-msgid "Graph"
-msgstr "Kaavio"
-
-msgid "RW"
-msgstr "RW"
-
-msgid "RA"
-msgstr "RA"
-
-msgid "compiled on"
-msgstr "käännetty"
-
-msgid "Programming"
-msgstr "Ohjelmointi"
-
-msgid "Graphics"
-msgstr "Grafiikka"
-
-msgid "Translators"
-msgstr "Kielenkääntäjät"
-
-msgid ""
-"We would like to thank the following people for suggestions, bug reports and "
-"patches:"
-msgstr ""
-"Haluaisimme kiittää seuraavia henkilöitä ehdotuksista, bugiraporteista ja "
-"patch-tiedostoista:"
-
-msgid "Contributors"
-msgstr "Avustajat"
-
-msgid ""
-"If you like our program, send a postcard with a photo of the city where you "
-"live to"
-msgstr ""
-"Jos pidät ohjelmastamme, lähetä meille postikortti, jossa on valokuva "
-"kotikaupungistasi osoitteeseen"
-
-msgid "We have received several postcards from our happy users"
-msgstr "Olemme saaneet useita postikortteja tyytyväísiltä ohjelman käyttäjiltä"
-
-msgid ""
-"Your postcards are a kind of motivation that encourages us to keep improving "
-"Kanatest :)"
-msgstr ""
-"Lähettämänne postikortit toimivat motivaation lähteenä ja rohkaisevat meitä "
-"edelleen parantamaan Kanatest-ohjelmaa :)"
-
-msgid "Thank you!"
-msgstr "Kiitos!"
-
-msgid "Postcards"
-msgstr "Postikortit"
-
-msgid "License"
-msgstr "Lisenssi"

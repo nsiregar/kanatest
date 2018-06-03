@@ -109,21 +109,20 @@ gchar tmpbuf[BUFFER_SIZE];
 
     GUI *appGUI = (GUI *)user_data;
 
-    font_selector = gtk_font_selection_dialog_new (_("Select kana font"));
+    font_selector = gtk_font_chooser_dialog_new (_("Select kana font"), NULL);
     gtk_window_set_modal (GTK_WINDOW(font_selector), TRUE);
     gtk_window_set_position (GTK_WINDOW(font_selector), GTK_WIN_POS_MOUSE);
     gtk_window_set_transient_for (GTK_WINDOW(font_selector), GTK_WINDOW(appGUI->opt->options_window));
     g_snprintf (tmpbuf, BUFFER_SIZE, "%s 16", config.kana_font_face);
-    gtk_font_selection_dialog_set_font_name (GTK_FONT_SELECTION_DIALOG(font_selector), tmpbuf);
-    gtk_font_selection_dialog_set_preview_text (GTK_FONT_SELECTION_DIALOG (font_selector),
-                                                EXAMPLE_KANA_TEXT);
+    gtk_font_chooser_set_font (GTK_FONT_CHOOSER(font_selector), tmpbuf);
+    gtk_font_chooser_set_preview_text (GTK_FONT_CHOOSER (font_selector), EXAMPLE_KANA_TEXT);
     gtk_widget_show (font_selector);
 
     response = gtk_dialog_run (GTK_DIALOG (font_selector));
 
     if (response == GTK_RESPONSE_OK) {
 
-        s = gtk_font_selection_dialog_get_font_name (GTK_FONT_SELECTION_DIALOG(font_selector));
+        s = gtk_font_chooser_get_font (GTK_FONT_CHOOSER(font_selector));
         n = strrchr (s, ' ');
         *n= '\0';
         strncpy(config.kana_font_face, s, MAX_FONTNAME_LEN);

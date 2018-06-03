@@ -65,12 +65,12 @@ void        show_splash_screen  (void);
 #define     gtk_combo_box_new_text    gtk_combo_box_text_new
 #define     gtk_combo_box_append_text gtk_combo_box_text_append_text
 
-#undef      GTK_FONT_SELECTION_DIALOG
-#define     GTK_FONT_SELECTION_DIALOG                  GTK_FONT_CHOOSER
-#define     gtk_font_selection_dialog_new(x)           gtk_font_chooser_dialog_new(x, NULL)
-#define     gtk_font_selection_dialog_get_font_name    gtk_font_chooser_get_font
-#define     gtk_font_selection_dialog_set_font_name    gtk_font_chooser_set_font
-#define     gtk_font_selection_dialog_set_preview_text gtk_font_chooser_set_preview_text
+//#undef      GTK_FONT_SELECTION_DIALOG
+//#define     GTK_FONT_SELECTION_DIALOG                  GTK_FONT_CHOOSER
+//#define     gtk_font_selection_dialog_new(x)           gtk_font_chooser_dialog_new(x, NULL)
+//#define     gtk_font_selection_dialog_get_font_name    gtk_font_chooser_get_font
+//#define     gtk_font_selection_dialog_set_font_name    gtk_font_chooser_set_font
+//#define     gtk_font_selection_dialog_set_preview_text gtk_font_chooser_set_preview_text
 #define     gtk_hbutton_box_new()                      gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL)
 #define     gtk_hseparator_new()                       gtk_separator_new(GTK_ORIENTATION_HORIZONTAL)
 
@@ -175,8 +175,8 @@ typedef struct {
     gboolean    any_key;
     gboolean    test_state;
 
-    gint        questions_table[MAX_NUMBER_OF_SIGNS]; // questions in order of asking
-    gint        kana_set_table[MAX_NUMBER_OF_SIGNS]; // possible answers
+    gint        questions_table[MAX_NUMBER_OF_SIGNS];       /* questions in order of asking */
+    gint        kana_set_table[MAX_NUMBER_OF_SIGNS];        /* possible answers */
     gint        kana_set_len[USER_DEFINED_LEN_OFFSET + 1];
 
     gint        kana_signs_set_0_idx[NUMBER_OF_SIGNS];      /* all kanas */

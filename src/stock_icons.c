@@ -30,45 +30,28 @@ void
 kanatest_register_stock_icons(void) {
 
 GdkPixbuf *pixbuf;
-gint i;
-GtkIconFactory *factory;
-GtkIconSet *icon_set;
-GtkIconSource *icon_source;
+gint i, h;
 
-GtkStockItem kanatest_stock_items[] = {
-    { (gchar*) KANATEST_STOCK_BUTTON_STATISTICS,    (gchar*) N_("Statistics"),  0, 0, TRANSLATION_DOMAIN },
-    { (gchar*) KANATEST_STOCK_BUTTON_CHART,         (gchar*) N_("Chart"),       0, 0, TRANSLATION_DOMAIN },
-    { (gchar*) KANATEST_STOCK_BUTTON_OPTIONS,       (gchar*) N_("Options"),     0, 0, TRANSLATION_DOMAIN },
-    { (gchar*) KANATEST_STOCK_BUTTON_ABOUT,         (gchar*) N_("About"),       0, 0, TRANSLATION_DOMAIN },
+gchar * kanatest_stock_items[] = {
+    KANATEST_STOCK_BUTTON_STATISTICS,
+    KANATEST_STOCK_BUTTON_CHART,     
+    KANATEST_STOCK_BUTTON_OPTIONS,   
+    KANATEST_STOCK_BUTTON_ABOUT,     
 };
 
-const guint8* kanatest_stock_item_data[] = {
-    (const guint8*) kanatest_stock_button_statistics,
-    (const guint8*) kanatest_stock_button_chart,
-    (const guint8*) kanatest_stock_button_options,
-    (const guint8*) kanatest_stock_button_about,
+const guint8 * kanatest_stock_item_data[] = {
+    kanatest_stock_button_statistics,
+    kanatest_stock_button_chart,
+    kanatest_stock_button_options,
+    kanatest_stock_button_about,
 };
 
-    gtk_stock_add (kanatest_stock_items, G_N_ELEMENTS (kanatest_stock_items));
-
-    factory = gtk_icon_factory_new ();
-    gtk_icon_factory_add_default(factory);
-
-    for(i = 0; i < G_N_ELEMENTS(kanatest_stock_item_data); i++) {
-        pixbuf = gdk_pixbuf_new_from_inline(-1, kanatest_stock_item_data[i], FALSE, NULL);
-        icon_source = gtk_icon_source_new ();
-        gtk_icon_source_set_pixbuf (icon_source, pixbuf);
-
-        icon_set = gtk_icon_set_new ();
-        gtk_icon_set_add_source (icon_set, icon_source);
-
-        gtk_icon_factory_add (factory, kanatest_stock_items[i].stock_id, icon_set);
-        g_object_unref (pixbuf);
-        gtk_icon_source_free (icon_source);
-        gtk_icon_set_unref (icon_set);
+	for(i = 0; i < G_N_ELEMENTS(kanatest_stock_item_data); i++) {
+		pixbuf = gdk_pixbuf_new_from_inline(-1, kanatest_stock_item_data[i], FALSE, NULL);
+        h = gdk_pixbuf_get_height (pixbuf);
+        gtk_icon_theme_add_builtin_icon(kanatest_stock_items[i], h, pixbuf);
+        g_object_unref(pixbuf);
     }
-
-    g_object_unref (factory);
 
 }
 

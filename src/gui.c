@@ -940,9 +940,7 @@ HildonGtkInputMode input_mode;
     gtk_widget_set_size_request (appGUI->timer_label, -1, 34);  /* icon height */
     gtk_box_pack_start (GTK_BOX (hbox2), appGUI->timer_label, FALSE, FALSE, 0);
 
-    /* Create interface buttons, but not put them inside layouts yet. */
-
-    appGUI->reverse_button = gui_stock_label_togglebutton(NULL, GTK_STOCK_REFRESH);
+    appGUI->reverse_button = gui_stock_label_togglebutton(NULL, "view-refresh");
     gtk_widget_set_can_focus (appGUI->reverse_button, FALSE);
     gtk_widget_set_tooltip_text (appGUI->reverse_button, _("Reverse mode"));
     g_signal_connect (G_OBJECT (appGUI->reverse_button), "toggled",
@@ -1119,7 +1117,7 @@ HildonGtkInputMode input_mode;
     gtk_box_pack_start (GTK_BOX (vbox0), hbuttonbox, FALSE, TRUE, 0);
     gtk_box_set_spacing (GTK_BOX (hbuttonbox), 5);
 
-    appGUI->start_button = gui_stock_label_button(_("Start"), GTK_STOCK_EXECUTE);
+    appGUI->start_button = gui_stock_label_button(_("Start"), "system-run");
     gtk_widget_set_can_focus (appGUI->start_button, FALSE);
     g_signal_connect (G_OBJECT (appGUI->start_button), "clicked",
                         G_CALLBACK (start_test_cb), appGUI);
@@ -1168,7 +1166,7 @@ HildonGtkInputMode input_mode;
 
      gtk_widget_set_tooltip_text (appGUI->about_button, _("About"));
 #endif
-    appGUI->stop_button = gui_stock_label_button(_("Stop"), GTK_STOCK_STOP);
+    appGUI->stop_button = gui_stock_label_button(_("Stop"), "stop");
     gtk_widget_set_can_focus (appGUI->stop_button, FALSE);
     g_signal_connect (G_OBJECT (appGUI->stop_button), "clicked",
                         G_CALLBACK (stop_test_cb), appGUI);
@@ -1178,7 +1176,7 @@ HildonGtkInputMode input_mode;
     gtk_widget_set_can_default (appGUI->stop_button, TRUE);
     gtk_widget_set_tooltip_text (appGUI->stop_button, _("Press to stop testing..."));
 
-    appGUI->quit_button = gui_stock_label_button(_("Quit"), GTK_STOCK_QUIT);
+    appGUI->quit_button = gui_stock_label_button(_("Quit"), "application-exit");
     gtk_widget_set_can_focus (appGUI->quit_button, FALSE);
     g_signal_connect (G_OBJECT (appGUI->quit_button), "clicked",
                         G_CALLBACK (gui_close_window_cb), appGUI);

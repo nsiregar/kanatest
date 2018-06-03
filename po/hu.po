@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: revision_28__hu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-11 23:39+0200\n"
+"POT-Creation-Date: 2013-01-26 21:02+0100\n"
 "PO-Revision-Date: 2013-09-12 15:15+0100\n"
 "Last-Translator: Csaba Szigetvári <csaba.szigetvari.budapest@gmail.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -20,6 +20,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=0;\n"
 "X-Generator: Poedit 1.5.7\n"
 
+msgid "About"
+msgstr "Magunkról"
+
+msgid "compiled on"
+msgstr "készítés időpontja"
+
+msgid "Programming"
+msgstr "Programozás"
+
+msgid "Graphics"
+msgstr "Grafika"
+
+msgid "Translators"
+msgstr "Fordítók"
+
+msgid ""
+"We would like to thank the following people for suggestions, bug reports and "
+"patches:"
+msgstr ""
+"Szeretnénk köszönetet mondani az alábbi személyeknek az ötletekért, "
+"hibajelentésekért és javításokért:"
+
+msgid "Contributors"
+msgstr "Támogatók"
+
+msgid ""
+"If you like our program, send a postcard with a photo of the city where you "
+"live to"
+msgstr ""
+"Amennyiben kedveled a programot, úgy küldj egy képeslapot a városról, "
+"amelyben élsz"
+
+msgid "We have received several postcards from our happy users"
+msgstr "Kaptunk számos képeslapot elégedett felhasználóinktól"
+
+msgid ""
+"Your postcards are a kind of motivation that encourages us to keep improving "
+"Kanatest :)"
+msgstr ""
+"A képeslapok jelentik számunkra azt a bátorító motivációt, ami segít "
+"dolgozni a Kanatest programon :)"
+
+msgid "Thank you!"
+msgstr "Köszönjük!"
+
+msgid "Postcards"
+msgstr "Képeslapok"
+
+msgid "License"
+msgstr "Liszensz"
+
 msgid "Kana chart"
 msgstr "Kana táblázat"
 
@@ -28,18 +79,6 @@ msgstr "Hiragana"
 
 msgid "Katakana"
 msgstr "Katakana"
-
-msgid "Statistics"
-msgstr "Statisztikák"
-
-msgid "Chart"
-msgstr "Grafikon"
-
-msgid "Options"
-msgstr "Opciók"
-
-msgid "About"
-msgstr "Magunkról"
 
 msgid "Test is in progress... Abort?"
 msgstr "Teszt folyamatban... Megszakítás?"
@@ -58,6 +97,12 @@ msgstr "Romaji"
 
 msgid "Reverse mode"
 msgstr "visszafordító mód"
+
+msgid "Statistics"
+msgstr "Statisztikák"
+
+msgid "Options"
+msgstr "Opciók"
 
 msgid "Test mode"
 msgstr "Teszt üzemmód"
@@ -207,6 +252,60 @@ msgstr "Hiragana + Romaji"
 
 msgid "Katakana + Romaji"
 msgstr "Katakana + Romaji"
+
+msgid "Reset"
+msgstr "Visszaállítás"
+
+msgid "Please select options"
+msgstr "Válassz opciót"
+
+msgid "Remove lessons list"
+msgstr "Gyakorlat lista törlése"
+
+msgid "Remove Hiragana statistics"
+msgstr "Hiragana statisztika törlése"
+
+msgid "Remove Katakana statistics"
+msgstr "Katakana statisztika törlése"
+
+msgid "No further recovery will be possible. Continue ?"
+msgstr "Egyéb javításra nincsen mód. Folytassam ?"
+
+msgid "Date"
+msgstr "Dátum"
+
+msgid "Test type"
+msgstr "Teszt típusa"
+
+msgid "Test time"
+msgstr "Teszt időtartam"
+
+msgid "Questions"
+msgstr "Kérdések"
+
+msgid "Correct"
+msgstr "Helyes"
+
+msgid "Wrong"
+msgstr "Hibás"
+
+msgid "Ratio (%)"
+msgstr "Arány (%)"
+
+msgid "Lessons"
+msgstr "Leckék"
+
+msgid "Graph"
+msgstr "Görbe"
+
+msgid "RW"
+msgstr "RW"
+
+msgid "RA"
+msgstr "RA"
+
+msgid "Chart"
+msgstr "Grafikon"
 
 msgid "Mixed"
 msgstr "Keverve"
@@ -610,105 +709,6 @@ msgstr "Gyakorlási idő"
 
 msgid "Information"
 msgstr "Információ"
-
-msgid "Reset"
-msgstr "Visszaállítás"
-
-msgid "Please select options"
-msgstr "Válassz opciót"
-
-msgid "Remove lessons list"
-msgstr "Gyakorlat lista törlése"
-
-msgid "Remove Hiragana statistics"
-msgstr "Hiragana statisztika törlése"
-
-msgid "Remove Katakana statistics"
-msgstr "Katakana statisztika törlése"
-
-msgid "No further recovery will be possible. Continue ?"
-msgstr "Egyéb javításra nincsen mód. Folytassam ?"
-
-msgid "Date"
-msgstr "Dátum"
-
-msgid "Test type"
-msgstr "Teszt típusa"
-
-msgid "Test time"
-msgstr "Teszt időtartam"
-
-msgid "Questions"
-msgstr "Kérdések"
-
-msgid "Correct"
-msgstr "Helyes"
-
-msgid "Wrong"
-msgstr "Hibás"
-
-msgid "Ratio (%)"
-msgstr "Arány (%)"
-
-msgid "Lessons"
-msgstr "Leckék"
-
-msgid "Graph"
-msgstr "Görbe"
-
-msgid "RW"
-msgstr "RW"
-
-msgid "RA"
-msgstr "RA"
-
-msgid "compiled on"
-msgstr "készítés időpontja"
-
-msgid "Programming"
-msgstr "Programozás"
-
-msgid "Graphics"
-msgstr "Grafika"
-
-msgid "Translators"
-msgstr "Fordítók"
-
-msgid ""
-"We would like to thank the following people for suggestions, bug reports and "
-"patches:"
-msgstr ""
-"Szeretnénk köszönetet mondani az alábbi személyeknek az ötletekért, "
-"hibajelentésekért és javításokért:"
-
-msgid "Contributors"
-msgstr "Támogatók"
-
-msgid ""
-"If you like our program, send a postcard with a photo of the city where you "
-"live to"
-msgstr ""
-"Amennyiben kedveled a programot, úgy küldj egy képeslapot a városról, "
-"amelyben élsz"
-
-msgid "We have received several postcards from our happy users"
-msgstr "Kaptunk számos képeslapot elégedett felhasználóinktól"
-
-msgid ""
-"Your postcards are a kind of motivation that encourages us to keep improving "
-"Kanatest :)"
-msgstr ""
-"A képeslapok jelentik számunkra azt a bátorító motivációt, ami segít "
-"dolgozni a Kanatest programon :)"
-
-msgid "Thank you!"
-msgstr "Köszönjük!"
-
-msgid "Postcards"
-msgstr "Képeslapok"
-
-msgid "License"
-msgstr "Liszensz"
 
 #~ msgid "Misc options"
 #~ msgstr "Egyéb beállítások"

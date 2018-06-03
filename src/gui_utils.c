@@ -38,7 +38,7 @@ GtkWidget   *image;
     hbox = gtk_hbox_new (FALSE, 2);
     gtk_container_add (GTK_CONTAINER (alignment), hbox);
 
-    image = gtk_image_new_from_stock (bstock, GTK_ICON_SIZE_BUTTON);
+	image = gtk_image_new_from_icon_name(bstock, GTK_ICON_SIZE_BUTTON);
 
     if (image) {
         gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, TRUE, 0);

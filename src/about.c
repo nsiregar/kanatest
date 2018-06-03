@@ -223,7 +223,7 @@ gchar *translators[] = {
 #endif
     gtk_widget_show (appGUI->about_window);
 
-    vbox1 = gtk_vbox_new (FALSE, 0);
+    vbox1 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_show (vbox1);
     gtk_container_add (GTK_CONTAINER (appGUI->about_window), vbox1);
 
@@ -234,7 +234,7 @@ gchar *translators[] = {
 
     /*-----------------------------------------------------------------*/
 
-    vbox2 = gtk_vbox_new (FALSE, 0);
+    vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_show (vbox2);
 
 #ifdef MAEMO
@@ -288,13 +288,24 @@ gchar *translators[] = {
 #ifdef MAEMO
     sprintf (buffer, "Kanatest-%s%s", VERSION, MAEMO_VERSION);
 #else
-#ifndef REV
+
+/* 
+ * http://stackoverflow.com/questions/3781520/how-to-test-if-preprocessor-symbol-is-defined-but-has-no-value 
+ */
+#define DO_EXPAND(VAL)  VAL ## 1
+#define EXPAND(VAL)     DO_EXPAND(VAL)
+
+#if (EXPAND(REPO) == 1)
     sprintf (buffer, "Kanatest %s\n", VERSION);
 #else
-    sprintf (buffer, "Kanatest SVN r%d\n", REV);
+    #define xstr(a) str(a)
+    #define str(a) #a
+    sprintf (buffer, "Kanatest GIT (%s)\n", xstr(REVISION));
 #endif
+
 #endif
-    gtk_text_buffer_insert_with_tags_by_name (entry_buffer, &iter,
+
+	gtk_text_buffer_insert_with_tags_by_name (entry_buffer, &iter,
                         buffer, -1, "big", "center", NULL);
 
     gtk_text_buffer_insert (entry_buffer, &iter, "\n", -1);
@@ -350,7 +361,7 @@ gchar *translators[] = {
 
     /*-----------------------------------------------------------------*/
 
-    vbox2 = gtk_vbox_new (FALSE, 0);
+    vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_show (vbox2);
 #ifdef MAEMO
     scrolled_window = hildon_pannable_area_new ();
@@ -400,7 +411,7 @@ gchar *translators[] = {
 
     /*-----------------------------------------------------------------*/
 
-    vbox2 = gtk_vbox_new (FALSE, 0);
+    vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_show (vbox2);
 #ifdef MAEMO
     scrolled_window = hildon_pannable_area_new ();
@@ -472,7 +483,7 @@ gchar *translators[] = {
 
     /*-----------------------------------------------------------------*/
 
-    vbox2 = gtk_vbox_new (FALSE, 0);
+    vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_show (vbox2);
 #ifdef MAEMO
     scrolled_window = hildon_pannable_area_new ();
@@ -526,7 +537,7 @@ gchar *translators[] = {
     gtk_button_box_set_layout (GTK_BUTTON_BOX(hbuttonbox), GTK_BUTTONBOX_END);
     gtk_box_pack_start (GTK_BOX (vbox1), hbuttonbox, FALSE, TRUE, 0);
 #ifndef MAEMO
-    close_button = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
+    close_button = gui_stock_label_button(_("Close"), "window-close");
     gtk_widget_show (close_button);
     g_signal_connect (G_OBJECT (close_button), "clicked",
                         G_CALLBACK (about_close_button_cb), appGUI);
